@@ -12,18 +12,18 @@
       "ownership": ["2nd Owner"],
       "registration_year": 2023,
       "km_driven": 39212,
-      "main_image": "https://picsum.photos/seed/used-car-1/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/2c8464ad-4e0c-4cd1-8ca4-4cac348574a6/5a8d8cd3-8323-4ead-a2db-d177919799a9/0e6a99f8-29f8-4b67-9d92-50a2829f9aa6/slot/1.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-1-1/800/600",
-        "https://picsum.photos/seed/used-car-1-2/800/600",
-        "https://picsum.photos/seed/used-car-1-3/800/600",
-        "https://picsum.photos/seed/used-car-1-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/89f9374d-e7a5-42dc-a295-891af45f4c8c/5a8d8cd3-8323-4ead-a2db-d177919799a9/9679528d-d086-4e88-8674-e391283501d1/slot/12.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/uploads/5a8d8cd3-8323-4ead-a2db-d177919799a9/287b1765-5f0f-4ed2-ac40-b6ee7001a662/slot/11.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/uploads/5a8d8cd3-8323-4ead-a2db-d177919799a9/ddb3ac05-b08b-44e5-887c-dcf80ec8e4da/slot/2.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹4442",
       "emi_per_month": "₹26,177",
       "additional_badge": "Great Deal",
       "engine": "V-Type",
-      "original_price": "₹7.46 lakh"
+      "original_price": "₹7.46 lakh",
+      "image_match_note": "exact CARS24 model images"
     },
     {
       "id": "e884d3a5-d905-4718-9b20-6dc84ba46e05",
@@ -37,18 +37,18 @@
       "ownership": ["3rd Owner"],
       "registration_year": 2019,
       "km_driven": 53046,
-      "main_image": "https://picsum.photos/seed/used-car-2/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/2c8464ad-4e0c-4cd1-8ca4-4cac348574a6/5a8d8cd3-8323-4ead-a2db-d177919799a9/0e6a99f8-29f8-4b67-9d92-50a2829f9aa6/slot/1.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-2-1/800/600",
-        "https://picsum.photos/seed/used-car-2-2/800/600",
-        "https://picsum.photos/seed/used-car-2-3/800/600",
-        "https://picsum.photos/seed/used-car-2-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/89f9374d-e7a5-42dc-a295-891af45f4c8c/5a8d8cd3-8323-4ead-a2db-d177919799a9/9679528d-d086-4e88-8674-e391283501d1/slot/12.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/uploads/5a8d8cd3-8323-4ead-a2db-d177919799a9/287b1765-5f0f-4ed2-ac40-b6ee7001a662/slot/11.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/uploads/5a8d8cd3-8323-4ead-a2db-d177919799a9/ddb3ac05-b08b-44e5-887c-dcf80ec8e4da/slot/2.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹1470",
       "emi_per_month": "₹26,245",
       "additional_badge": "Assured",
       "engine": "V-Type",
-      "original_price": "₹4.23 lakh"
+      "original_price": "₹4.23 lakh",
+      "image_match_note": "exact CARS24 model images"
     },
     {
       "id": "49356166-de51-4d17-bf63-4e641be0317c",
@@ -62,18 +62,18 @@
       "ownership": ["2nd Owner"],
       "registration_year": 2022,
       "km_driven": 59662,
-      "main_image": "https://picsum.photos/seed/used-car-3/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/2c8464ad-4e0c-4cd1-8ca4-4cac348574a6/5a8d8cd3-8323-4ead-a2db-d177919799a9/0e6a99f8-29f8-4b67-9d92-50a2829f9aa6/slot/1.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-3-1/800/600",
-        "https://picsum.photos/seed/used-car-3-2/800/600",
-        "https://picsum.photos/seed/used-car-3-3/800/600",
-        "https://picsum.photos/seed/used-car-3-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/89f9374d-e7a5-42dc-a295-891af45f4c8c/5a8d8cd3-8323-4ead-a2db-d177919799a9/9679528d-d086-4e88-8674-e391283501d1/slot/12.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/uploads/5a8d8cd3-8323-4ead-a2db-d177919799a9/287b1765-5f0f-4ed2-ac40-b6ee7001a662/slot/11.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/uploads/5a8d8cd3-8323-4ead-a2db-d177919799a9/ddb3ac05-b08b-44e5-887c-dcf80ec8e4da/slot/2.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹1332",
       "emi_per_month": "₹26,915",
       "additional_badge": "Top Pick",
       "engine": "Inline",
-      "original_price": "₹8.23 lakh"
+      "original_price": "₹8.23 lakh",
+      "image_match_note": "exact CARS24 model images"
     },
     {
       "id": "994a2c04-2866-4e53-95ce-7a6e6d53694e",
@@ -87,18 +87,18 @@
       "ownership": ["1st Owner"],
       "registration_year": 2021,
       "km_driven": 28500,
-      "main_image": "https://picsum.photos/seed/used-car-4/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/277f8138-2b1b-413a-8516-0ff17bf90315/351689b7-616e-441f-b45c-4ad43fc5fa46/9e8c253a-ef61-4602-ac3e-04181b0f4166/slot/1.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-4-1/800/600",
-        "https://picsum.photos/seed/used-car-4-2/800/600",
-        "https://picsum.photos/seed/used-car-4-3/800/600",
-        "https://picsum.photos/seed/used-car-4-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/b07332eb-1afc-4a54-84c6-8c1c214576fe/351689b7-616e-441f-b45c-4ad43fc5fa46/be070219-16f3-4311-86ff-8732b6326e77/slot/2.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/uploads/6a086abfa3d0750f7f58fb8f/dddd6c9d-8c5e-4ab1-94db-a7d3bd1a0339/slot/Odometer-Image---Original.png?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/75fbcb8e-b385-4db3-becc-50f43312146b/351689b7-616e-441f-b45c-4ad43fc5fa46/f7784952-c02c-47eb-877b-33a0b379630f/slot/4.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹2231",
       "emi_per_month": "₹18,302",
       "additional_badge": "Best Seller",
       "engine": "Inline",
-      "original_price": "₹6.85 lakh"
+      "original_price": "₹6.85 lakh",
+      "image_match_note": "exact CARS24 model images"
     },
     {
       "id": "470e4a70-91b9-4618-97b8-1e1cd4d1d52f",
@@ -112,18 +112,18 @@
       "ownership": ["1st Owner"],
       "registration_year": 2022,
       "km_driven": 31200,
-      "main_image": "https://picsum.photos/seed/used-car-5/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/b2d67243-70b9-478c-bd58-81471381543a/179ee4ea-48db-4ffc-82b7-fa91646d78ed/c7e3e0a2-b25d-4023-968c-0e46fada4b43/slot/2.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-5-1/800/600",
-        "https://picsum.photos/seed/used-car-5-2/800/600",
-        "https://picsum.photos/seed/used-car-5-3/800/600",
-        "https://picsum.photos/seed/used-car-5-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/acc13108-ac85-40e9-833d-7544b0cb5a49/179ee4ea-48db-4ffc-82b7-fa91646d78ed/e0f65b48-3e1e-41c3-b9b2-947564009853/slot/1.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/ee5d7584-3e9a-4109-989d-6196edc9c0a0/179ee4ea-48db-4ffc-82b7-fa91646d78ed/52c3f052-889a-448a-9269-cd8e80b1c5f6/slot/2.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/bf1af6ec-34cf-4499-91ec-b08ad7ebbb19/179ee4ea-48db-4ffc-82b7-fa91646d78ed/8318bdab-92bf-4500-99f6-cf40492b87ae/slot/3.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹1891",
       "emi_per_month": "₹20,649",
       "additional_badge": "Top Pick",
       "engine": "Inline",
-      "original_price": "₹12.80 lakh"
+      "original_price": "₹12.80 lakh",
+      "image_match_note": "exact CARS24 model images"
     },
     {
       "id": "9c047dcc-a2d5-4641-9fbe-bcba46fbb940",
@@ -137,18 +137,17 @@
       "ownership": ["2nd Owner"],
       "registration_year": 2020,
       "km_driven": 45000,
-      "main_image": "https://picsum.photos/seed/used-car-6/800/600",
+      "main_image": "https://marketplace-cdn.cars24.com/production/11439208719/exterior/2025-08-19/car_replace_bg_b2314fae-0d3b-4391-84df-c02396bd8d77.png?dpr=2&format=auto&w=700",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-6-1/800/600",
-        "https://picsum.photos/seed/used-car-6-2/800/600",
-        "https://picsum.photos/seed/used-car-6-3/800/600",
-        "https://picsum.photos/seed/used-car-6-4/800/600"
+        "https://marketplace-cdn.cars24.com/production/11439208719/exterior/2025-08-19/car_replace_bg_d10b3ad4-9c85-43f7-bffc-139a59afc3d4.png?dpr=2&format=auto&w=700",
+        "https://marketplace-cdn.cars24.com/production/11439208719/exterior/2025-08-19/car_replace_bg_67150150-9e37-47c8-8510-96b8e41c571f.png?dpr=2&format=auto&w=700"
       ],
       "discount_price": "₹5347",
       "emi_per_month": "₹8,769",
       "additional_badge": "Great Deal",
       "engine": "Inline",
-      "original_price": "₹10.25 lakh"
+      "original_price": "₹10.25 lakh",
+      "image_match_note": "exact CARS24 model images"
     },
     {
       "id": "e6fe38e1-797e-4995-982a-0ff7c1fde546",
@@ -162,18 +161,18 @@
       "ownership": ["1st Owner"],
       "registration_year": 2023,
       "km_driven": 15000,
-      "main_image": "https://picsum.photos/seed/used-car-7/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/b2d67243-70b9-478c-bd58-81471381543a/179ee4ea-48db-4ffc-82b7-fa91646d78ed/c7e3e0a2-b25d-4023-968c-0e46fada4b43/slot/2.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-7-1/800/600",
-        "https://picsum.photos/seed/used-car-7-2/800/600",
-        "https://picsum.photos/seed/used-car-7-3/800/600",
-        "https://picsum.photos/seed/used-car-7-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/acc13108-ac85-40e9-833d-7544b0cb5a49/179ee4ea-48db-4ffc-82b7-fa91646d78ed/e0f65b48-3e1e-41c3-b9b2-947564009853/slot/1.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/ee5d7584-3e9a-4109-989d-6196edc9c0a0/179ee4ea-48db-4ffc-82b7-fa91646d78ed/52c3f052-889a-448a-9269-cd8e80b1c5f6/slot/2.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/bf1af6ec-34cf-4499-91ec-b08ad7ebbb19/179ee4ea-48db-4ffc-82b7-fa91646d78ed/8318bdab-92bf-4500-99f6-cf40492b87ae/slot/3.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹1582",
       "emi_per_month": "₹9,334",
       "additional_badge": "Premium",
       "engine": "Turbo",
-      "original_price": "₹18.90 lakh"
+      "original_price": "₹18.90 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Hyundai Creta"
     },
     {
       "id": "0972b124-328f-4fa5-bde2-98ceecead39b",
@@ -187,18 +186,18 @@
       "ownership": ["1st Owner"],
       "registration_year": 2022,
       "km_driven": 42000,
-      "main_image": "https://picsum.photos/seed/used-car-8/800/600",
+      "main_image": "https://marketplace-cdn.cars24.com/production/10112008787/exterior/2025-09-22/car_replace_bg_d90f4e74-6664-4a1e-bd81-387e0e6636f6.png?dpr=2&format=auto&w=700",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-8-1/800/600",
-        "https://picsum.photos/seed/used-car-8-2/800/600",
-        "https://picsum.photos/seed/used-car-8-3/800/600",
-        "https://picsum.photos/seed/used-car-8-4/800/600"
+        "https://marketplace-cdn.cars24.com/production/10112008787/exterior/2025-09-22/car_replace_bg_4d90d395-baaa-4956-b709-f59a5bb87581.png?dpr=2&format=auto&w=700",
+        "https://marketplace-cdn.cars24.com/production/10112008787/exterior/2025-09-22/car_replace_bg_9b9e5cff-75c0-4f9d-84d7-302bc505099e.png?dpr=2&format=auto&w=700",
+        "https://marketplace-cdn.cars24.com/production/10112008787/exterior/2025-09-22/car_replace_bg_45adcd79-d5df-48e2-8701-4b3c5d8b8d2b.png?dpr=2&format=auto&w=700"
       ],
       "discount_price": "₹2390",
       "emi_per_month": "₹17,799",
       "additional_badge": "Assured",
       "engine": "Inline",
-      "original_price": "₹22.40 lakh"
+      "original_price": "₹22.40 lakh",
+      "image_match_note": "exact CARS24 model images"
     },
     {
       "id": "2c25d0ca-c97e-48d0-9523-5eb4588bbe4d",
@@ -212,18 +211,18 @@
       "ownership": ["1st Owner"],
       "registration_year": 2021,
       "km_driven": 36000,
-      "main_image": "https://picsum.photos/seed/used-car-9/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/89241034-2797-4c48-b369-7a8d81862627/70a7c0e8-6366-48e2-bfc3-bc53f64d9490/d270d276-f9d2-4f9c-a6cf-e3cc028e676f/slot/2.jpg?dpr=2&format=auto&w=700",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-9-1/800/600",
-        "https://picsum.photos/seed/used-car-9-2/800/600",
-        "https://picsum.photos/seed/used-car-9-3/800/600",
-        "https://picsum.photos/seed/used-car-9-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/168765c4-cc74-412b-a1be-a5b04aa01461/70a7c0e8-6366-48e2-bfc3-bc53f64d9490/906336cf-2dd3-40b5-afdf-2b56a1763f95/slot/1.jpg?dpr=2&format=auto&w=700",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/b6253cdf-d68a-4d92-860f-995cad1ee746/70a7c0e8-6366-48e2-bfc3-bc53f64d9490/f861795a-a11c-4d1e-8f17-71abff80295b/slot/3.jpg?dpr=2&format=auto&w=700",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/5dad9a0e-5ecd-4a53-8513-41da999ace86/70a7c0e8-6366-48e2-bfc3-bc53f64d9490/0eb496d1-5386-4781-b318-4dc1ef88cc0f/slot/4.jpg?dpr=2&format=auto&w=700"
       ],
       "discount_price": "₹2056",
       "emi_per_month": "₹16,439",
       "additional_badge": "Hot Deal",
       "engine": "Turbo",
-      "original_price": "₹14.20 lakh"
+      "original_price": "₹14.20 lakh",
+      "image_match_note": "exact CARS24 model images"
     },
     {
       "id": "744e7232-2d24-4c8a-b85f-8853c5b5264a",
@@ -237,18 +236,18 @@
       "ownership": ["2nd Owner"],
       "registration_year": 2019,
       "km_driven": 62000,
-      "main_image": "https://picsum.photos/seed/used-car-10/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/277f8138-2b1b-413a-8516-0ff17bf90315/351689b7-616e-441f-b45c-4ad43fc5fa46/9e8c253a-ef61-4602-ac3e-04181b0f4166/slot/1.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-10-1/800/600",
-        "https://picsum.photos/seed/used-car-10-2/800/600",
-        "https://picsum.photos/seed/used-car-10-3/800/600",
-        "https://picsum.photos/seed/used-car-10-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/b07332eb-1afc-4a54-84c6-8c1c214576fe/351689b7-616e-441f-b45c-4ad43fc5fa46/be070219-16f3-4311-86ff-8732b6326e77/slot/2.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/uploads/6a086abfa3d0750f7f58fb8f/dddd6c9d-8c5e-4ab1-94db-a7d3bd1a0339/slot/Odometer-Image---Original.png?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/75fbcb8e-b385-4db3-becc-50f43312146b/351689b7-616e-441f-b45c-4ad43fc5fa46/f7784952-c02c-47eb-877b-33a0b379630f/slot/4.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹2810",
       "emi_per_month": "₹27,951",
       "additional_badge": "Budget Pick",
       "engine": "Inline",
-      "original_price": "₹4.10 lakh"
+      "original_price": "₹4.10 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Maruti Suzuki Swift"
     },
     {
       "id": "46cca0f6-4c7d-47b2-8580-52fd3a2fb67c",
@@ -262,18 +261,18 @@
       "ownership": ["1st Owner"],
       "registration_year": 2021,
       "km_driven": 27000,
-      "main_image": "https://picsum.photos/seed/used-car-11/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/b2d67243-70b9-478c-bd58-81471381543a/179ee4ea-48db-4ffc-82b7-fa91646d78ed/c7e3e0a2-b25d-4023-968c-0e46fada4b43/slot/2.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-11-1/800/600",
-        "https://picsum.photos/seed/used-car-11-2/800/600",
-        "https://picsum.photos/seed/used-car-11-3/800/600",
-        "https://picsum.photos/seed/used-car-11-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/acc13108-ac85-40e9-833d-7544b0cb5a49/179ee4ea-48db-4ffc-82b7-fa91646d78ed/e0f65b48-3e1e-41c3-b9b2-947564009853/slot/1.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/ee5d7584-3e9a-4109-989d-6196edc9c0a0/179ee4ea-48db-4ffc-82b7-fa91646d78ed/52c3f052-889a-448a-9269-cd8e80b1c5f6/slot/2.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/bf1af6ec-34cf-4499-91ec-b08ad7ebbb19/179ee4ea-48db-4ffc-82b7-fa91646d78ed/8318bdab-92bf-4500-99f6-cf40492b87ae/slot/3.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹1230",
       "emi_per_month": "₹17,622",
       "additional_badge": "Great Deal",
       "engine": "Turbo",
-      "original_price": "₹8.30 lakh"
+      "original_price": "₹8.30 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Hyundai Creta"
     },
     {
       "id": "98e9fe14-b0f0-4f3e-8eee-4f647f8026c6",
@@ -287,18 +286,18 @@
       "ownership": ["2nd Owner"],
       "registration_year": 2018,
       "km_driven": 69000,
-      "main_image": "https://picsum.photos/seed/used-car-12/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/277f8138-2b1b-413a-8516-0ff17bf90315/351689b7-616e-441f-b45c-4ad43fc5fa46/9e8c253a-ef61-4602-ac3e-04181b0f4166/slot/1.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-12-1/800/600",
-        "https://picsum.photos/seed/used-car-12-2/800/600",
-        "https://picsum.photos/seed/used-car-12-3/800/600",
-        "https://picsum.photos/seed/used-car-12-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/b07332eb-1afc-4a54-84c6-8c1c214576fe/351689b7-616e-441f-b45c-4ad43fc5fa46/be070219-16f3-4311-86ff-8732b6326e77/slot/2.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/uploads/6a086abfa3d0750f7f58fb8f/dddd6c9d-8c5e-4ab1-94db-a7d3bd1a0339/slot/Odometer-Image---Original.png?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/75fbcb8e-b385-4db3-becc-50f43312146b/351689b7-616e-441f-b45c-4ad43fc5fa46/f7784952-c02c-47eb-877b-33a0b379630f/slot/4.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹1215",
       "emi_per_month": "₹21,078",
       "additional_badge": "Assured",
       "engine": "Inline",
-      "original_price": "₹7.20 lakh"
+      "original_price": "₹7.20 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Maruti Suzuki Swift"
     },
     {
       "id": "edf78fe8-44c8-42d1-96d9-32999002fd04",
@@ -312,18 +311,17 @@
       "ownership": ["1st Owner"],
       "registration_year": 2023,
       "km_driven": 11000,
-      "main_image": "https://picsum.photos/seed/used-car-13/800/600",
+      "main_image": "https://marketplace-cdn.cars24.com/production/11439208719/exterior/2025-08-19/car_replace_bg_b2314fae-0d3b-4391-84df-c02396bd8d77.png?dpr=2&format=auto&w=700",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-13-1/800/600",
-        "https://picsum.photos/seed/used-car-13-2/800/600",
-        "https://picsum.photos/seed/used-car-13-3/800/600",
-        "https://picsum.photos/seed/used-car-13-4/800/600"
+        "https://marketplace-cdn.cars24.com/production/11439208719/exterior/2025-08-19/car_replace_bg_d10b3ad4-9c85-43f7-bffc-139a59afc3d4.png?dpr=2&format=auto&w=700",
+        "https://marketplace-cdn.cars24.com/production/11439208719/exterior/2025-08-19/car_replace_bg_67150150-9e37-47c8-8510-96b8e41c571f.png?dpr=2&format=auto&w=700"
       ],
       "discount_price": "₹1496",
       "emi_per_month": "₹29,679",
       "additional_badge": "Top Pick",
       "engine": "Turbo",
-      "original_price": "₹16.50 lakh"
+      "original_price": "₹16.50 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Honda City"
     },
     {
       "id": "19b2d3cd-3141-47d4-b6d7-7dd6404e82db",
@@ -337,18 +335,18 @@
       "ownership": ["1st Owner"],
       "registration_year": 2021,
       "km_driven": 48000,
-      "main_image": "https://picsum.photos/seed/used-car-14/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/b2d67243-70b9-478c-bd58-81471381543a/179ee4ea-48db-4ffc-82b7-fa91646d78ed/c7e3e0a2-b25d-4023-968c-0e46fada4b43/slot/2.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-14-1/800/600",
-        "https://picsum.photos/seed/used-car-14-2/800/600",
-        "https://picsum.photos/seed/used-car-14-3/800/600",
-        "https://picsum.photos/seed/used-car-14-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/acc13108-ac85-40e9-833d-7544b0cb5a49/179ee4ea-48db-4ffc-82b7-fa91646d78ed/e0f65b48-3e1e-41c3-b9b2-947564009853/slot/1.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/ee5d7584-3e9a-4109-989d-6196edc9c0a0/179ee4ea-48db-4ffc-82b7-fa91646d78ed/52c3f052-889a-448a-9269-cd8e80b1c5f6/slot/2.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/bf1af6ec-34cf-4499-91ec-b08ad7ebbb19/179ee4ea-48db-4ffc-82b7-fa91646d78ed/8318bdab-92bf-4500-99f6-cf40492b87ae/slot/3.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹3636",
       "emi_per_month": "₹7,187",
       "additional_badge": "Premium",
       "engine": "Turbo",
-      "original_price": "₹19.30 lakh"
+      "original_price": "₹19.30 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Hyundai Creta"
     },
     {
       "id": "48c360d5-904b-44ba-ae92-c219a722b34e",
@@ -362,18 +360,18 @@
       "ownership": ["2nd Owner"],
       "registration_year": 2019,
       "km_driven": 58000,
-      "main_image": "https://picsum.photos/seed/used-car-15/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/b2d67243-70b9-478c-bd58-81471381543a/179ee4ea-48db-4ffc-82b7-fa91646d78ed/c7e3e0a2-b25d-4023-968c-0e46fada4b43/slot/2.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-15-1/800/600",
-        "https://picsum.photos/seed/used-car-15-2/800/600",
-        "https://picsum.photos/seed/used-car-15-3/800/600",
-        "https://picsum.photos/seed/used-car-15-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/acc13108-ac85-40e9-833d-7544b0cb5a49/179ee4ea-48db-4ffc-82b7-fa91646d78ed/e0f65b48-3e1e-41c3-b9b2-947564009853/slot/1.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/ee5d7584-3e9a-4109-989d-6196edc9c0a0/179ee4ea-48db-4ffc-82b7-fa91646d78ed/52c3f052-889a-448a-9269-cd8e80b1c5f6/slot/2.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/bf1af6ec-34cf-4499-91ec-b08ad7ebbb19/179ee4ea-48db-4ffc-82b7-fa91646d78ed/8318bdab-92bf-4500-99f6-cf40492b87ae/slot/3.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹5199",
       "emi_per_month": "₹22,613",
       "additional_badge": "Great Deal",
       "engine": "Inline",
-      "original_price": "₹9.75 lakh"
+      "original_price": "₹9.75 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Hyundai Creta"
     },
     {
       "id": "922d2a88-1ef2-4ef7-80ab-a168d6771e5d",
@@ -387,18 +385,18 @@
       "ownership": ["1st Owner"],
       "registration_year": 2020,
       "km_driven": 33000,
-      "main_image": "https://picsum.photos/seed/used-car-16/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/277f8138-2b1b-413a-8516-0ff17bf90315/351689b7-616e-441f-b45c-4ad43fc5fa46/9e8c253a-ef61-4602-ac3e-04181b0f4166/slot/1.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-16-1/800/600",
-        "https://picsum.photos/seed/used-car-16-2/800/600",
-        "https://picsum.photos/seed/used-car-16-3/800/600",
-        "https://picsum.photos/seed/used-car-16-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/b07332eb-1afc-4a54-84c6-8c1c214576fe/351689b7-616e-441f-b45c-4ad43fc5fa46/be070219-16f3-4311-86ff-8732b6326e77/slot/2.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/uploads/6a086abfa3d0750f7f58fb8f/dddd6c9d-8c5e-4ab1-94db-a7d3bd1a0339/slot/Odometer-Image---Original.png?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/75fbcb8e-b385-4db3-becc-50f43312146b/351689b7-616e-441f-b45c-4ad43fc5fa46/f7784952-c02c-47eb-877b-33a0b379630f/slot/4.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹4253",
       "emi_per_month": "₹24,573",
       "additional_badge": "Best Seller",
       "engine": "Inline",
-      "original_price": "₹8.60 lakh"
+      "original_price": "₹8.60 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Maruti Suzuki Swift"
     },
     {
       "id": "dd436eeb-f78c-4646-af42-0122ad5ced6f",
@@ -412,18 +410,18 @@
       "ownership": ["1st Owner"],
       "registration_year": 2021,
       "km_driven": 25000,
-      "main_image": "https://picsum.photos/seed/used-car-17/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/277f8138-2b1b-413a-8516-0ff17bf90315/351689b7-616e-441f-b45c-4ad43fc5fa46/9e8c253a-ef61-4602-ac3e-04181b0f4166/slot/1.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-17-1/800/600",
-        "https://picsum.photos/seed/used-car-17-2/800/600",
-        "https://picsum.photos/seed/used-car-17-3/800/600",
-        "https://picsum.photos/seed/used-car-17-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/b07332eb-1afc-4a54-84c6-8c1c214576fe/351689b7-616e-441f-b45c-4ad43fc5fa46/be070219-16f3-4311-86ff-8732b6326e77/slot/2.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/uploads/6a086abfa3d0750f7f58fb8f/dddd6c9d-8c5e-4ab1-94db-a7d3bd1a0339/slot/Odometer-Image---Original.png?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/75fbcb8e-b385-4db3-becc-50f43312146b/351689b7-616e-441f-b45c-4ad43fc5fa46/f7784952-c02c-47eb-877b-33a0b379630f/slot/4.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹4206",
       "emi_per_month": "₹16,337",
       "additional_badge": "Assured",
       "engine": "Inline",
-      "original_price": "₹8.40 lakh"
+      "original_price": "₹8.40 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Maruti Suzuki Swift"
     },
     {
       "id": "0eb882bf-ddd9-4c69-9f54-9814d6088d2a",
@@ -437,18 +435,18 @@
       "ownership": ["2nd Owner"],
       "registration_year": 2020,
       "km_driven": 72000,
-      "main_image": "https://picsum.photos/seed/used-car-18/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/b2d67243-70b9-478c-bd58-81471381543a/179ee4ea-48db-4ffc-82b7-fa91646d78ed/c7e3e0a2-b25d-4023-968c-0e46fada4b43/slot/2.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-18-1/800/600",
-        "https://picsum.photos/seed/used-car-18-2/800/600",
-        "https://picsum.photos/seed/used-car-18-3/800/600",
-        "https://picsum.photos/seed/used-car-18-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/acc13108-ac85-40e9-833d-7544b0cb5a49/179ee4ea-48db-4ffc-82b7-fa91646d78ed/e0f65b48-3e1e-41c3-b9b2-947564009853/slot/1.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/ee5d7584-3e9a-4109-989d-6196edc9c0a0/179ee4ea-48db-4ffc-82b7-fa91646d78ed/52c3f052-889a-448a-9269-cd8e80b1c5f6/slot/2.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/bf1af6ec-34cf-4499-91ec-b08ad7ebbb19/179ee4ea-48db-4ffc-82b7-fa91646d78ed/8318bdab-92bf-4500-99f6-cf40492b87ae/slot/3.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹2932",
       "emi_per_month": "₹24,756",
       "additional_badge": "Top Pick",
       "engine": "Turbo",
-      "original_price": "₹15.80 lakh"
+      "original_price": "₹15.80 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Hyundai Creta"
     },
     {
       "id": "0f463337-2f8c-416c-a8e3-d64e49f3eec6",
@@ -462,18 +460,18 @@
       "ownership": ["1st Owner"],
       "registration_year": 2022,
       "km_driven": 39000,
-      "main_image": "https://picsum.photos/seed/used-car-19/800/600",
+      "main_image": "https://marketplace-cdn.cars24.com/production/10112008787/exterior/2025-09-22/car_replace_bg_d90f4e74-6664-4a1e-bd81-387e0e6636f6.png?dpr=2&format=auto&w=700",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-19-1/800/600",
-        "https://picsum.photos/seed/used-car-19-2/800/600",
-        "https://picsum.photos/seed/used-car-19-3/800/600",
-        "https://picsum.photos/seed/used-car-19-4/800/600"
+        "https://marketplace-cdn.cars24.com/production/10112008787/exterior/2025-09-22/car_replace_bg_4d90d395-baaa-4956-b709-f59a5bb87581.png?dpr=2&format=auto&w=700",
+        "https://marketplace-cdn.cars24.com/production/10112008787/exterior/2025-09-22/car_replace_bg_9b9e5cff-75c0-4f9d-84d7-302bc505099e.png?dpr=2&format=auto&w=700",
+        "https://marketplace-cdn.cars24.com/production/10112008787/exterior/2025-09-22/car_replace_bg_45adcd79-d5df-48e2-8701-4b3c5d8b8d2b.png?dpr=2&format=auto&w=700"
       ],
       "discount_price": "₹4597",
       "emi_per_month": "₹15,480",
       "additional_badge": "Premium",
       "engine": "Turbo",
-      "original_price": "₹41.90 lakh"
+      "original_price": "₹41.90 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Toyota Innova Crysta"
     },
     {
       "id": "b38885e5-1fbb-42a0-8a23-3bc350b87c18",
@@ -487,18 +485,17 @@
       "ownership": ["1st Owner"],
       "registration_year": 2021,
       "km_driven": 29500,
-      "main_image": "https://picsum.photos/seed/used-car-20/800/600",
+      "main_image": "https://marketplace-cdn.cars24.com/production/11439208719/exterior/2025-08-19/car_replace_bg_b2314fae-0d3b-4391-84df-c02396bd8d77.png?dpr=2&format=auto&w=700",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-20-1/800/600",
-        "https://picsum.photos/seed/used-car-20-2/800/600",
-        "https://picsum.photos/seed/used-car-20-3/800/600",
-        "https://picsum.photos/seed/used-car-20-4/800/600"
+        "https://marketplace-cdn.cars24.com/production/11439208719/exterior/2025-08-19/car_replace_bg_d10b3ad4-9c85-43f7-bffc-139a59afc3d4.png?dpr=2&format=auto&w=700",
+        "https://marketplace-cdn.cars24.com/production/11439208719/exterior/2025-08-19/car_replace_bg_67150150-9e37-47c8-8510-96b8e41c571f.png?dpr=2&format=auto&w=700"
       ],
       "discount_price": "₹3966",
       "emi_per_month": "₹8,388",
       "additional_badge": "Great Deal",
       "engine": "Inline",
-      "original_price": "₹9.10 lakh"
+      "original_price": "₹9.10 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Honda City"
     },
     {
       "id": "d3bf1951-19e8-483e-b817-1fad4f22a75e",
@@ -512,18 +509,18 @@
       "ownership": ["1st Owner"],
       "registration_year": 2021,
       "km_driven": 41000,
-      "main_image": "https://picsum.photos/seed/used-car-21/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/89241034-2797-4c48-b369-7a8d81862627/70a7c0e8-6366-48e2-bfc3-bc53f64d9490/d270d276-f9d2-4f9c-a6cf-e3cc028e676f/slot/2.jpg?dpr=2&format=auto&w=700",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-21-1/800/600",
-        "https://picsum.photos/seed/used-car-21-2/800/600",
-        "https://picsum.photos/seed/used-car-21-3/800/600",
-        "https://picsum.photos/seed/used-car-21-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/168765c4-cc74-412b-a1be-a5b04aa01461/70a7c0e8-6366-48e2-bfc3-bc53f64d9490/906336cf-2dd3-40b5-afdf-2b56a1763f95/slot/1.jpg?dpr=2&format=auto&w=700",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/b6253cdf-d68a-4d92-860f-995cad1ee746/70a7c0e8-6366-48e2-bfc3-bc53f64d9490/f861795a-a11c-4d1e-8f17-71abff80295b/slot/3.jpg?dpr=2&format=auto&w=700",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/5dad9a0e-5ecd-4a53-8513-41da999ace86/70a7c0e8-6366-48e2-bfc3-bc53f64d9490/0eb496d1-5386-4781-b318-4dc1ef88cc0f/slot/4.jpg?dpr=2&format=auto&w=700"
       ],
       "discount_price": "₹1905",
       "emi_per_month": "₹29,314",
       "additional_badge": "Assured",
       "engine": "Turbo",
-      "original_price": "₹11.50 lakh"
+      "original_price": "₹11.50 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Kia Seltos"
     },
     {
       "id": "639811fd-335e-43f0-93b9-af0cc8d436c3",
@@ -537,18 +534,18 @@
       "ownership": ["1st Owner"],
       "registration_year": 2022,
       "km_driven": 21000,
-      "main_image": "https://picsum.photos/seed/used-car-22/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/2c8464ad-4e0c-4cd1-8ca4-4cac348574a6/5a8d8cd3-8323-4ead-a2db-d177919799a9/0e6a99f8-29f8-4b67-9d92-50a2829f9aa6/slot/1.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-22-1/800/600",
-        "https://picsum.photos/seed/used-car-22-2/800/600",
-        "https://picsum.photos/seed/used-car-22-3/800/600",
-        "https://picsum.photos/seed/used-car-22-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/89f9374d-e7a5-42dc-a295-891af45f4c8c/5a8d8cd3-8323-4ead-a2db-d177919799a9/9679528d-d086-4e88-8674-e391283501d1/slot/12.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/uploads/5a8d8cd3-8323-4ead-a2db-d177919799a9/287b1765-5f0f-4ed2-ac40-b6ee7001a662/slot/11.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/uploads/5a8d8cd3-8323-4ead-a2db-d177919799a9/ddb3ac05-b08b-44e5-887c-dcf80ec8e4da/slot/2.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹4694",
       "emi_per_month": "₹15,566",
       "additional_badge": "Best Seller",
       "engine": "Inline",
-      "original_price": "₹8.70 lakh"
+      "original_price": "₹8.70 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Tata Nexon"
     },
     {
       "id": "fa535eae-529c-4109-b4f1-213cd8fe6264",
@@ -562,18 +559,18 @@
       "ownership": ["1st Owner"],
       "registration_year": 2023,
       "km_driven": 18000,
-      "main_image": "https://picsum.photos/seed/used-car-23/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/b2d67243-70b9-478c-bd58-81471381543a/179ee4ea-48db-4ffc-82b7-fa91646d78ed/c7e3e0a2-b25d-4023-968c-0e46fada4b43/slot/2.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-23-1/800/600",
-        "https://picsum.photos/seed/used-car-23-2/800/600",
-        "https://picsum.photos/seed/used-car-23-3/800/600",
-        "https://picsum.photos/seed/used-car-23-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/acc13108-ac85-40e9-833d-7544b0cb5a49/179ee4ea-48db-4ffc-82b7-fa91646d78ed/e0f65b48-3e1e-41c3-b9b2-947564009853/slot/1.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/ee5d7584-3e9a-4109-989d-6196edc9c0a0/179ee4ea-48db-4ffc-82b7-fa91646d78ed/52c3f052-889a-448a-9269-cd8e80b1c5f6/slot/2.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/bf1af6ec-34cf-4499-91ec-b08ad7ebbb19/179ee4ea-48db-4ffc-82b7-fa91646d78ed/8318bdab-92bf-4500-99f6-cf40492b87ae/slot/3.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹2676",
       "emi_per_month": "₹10,413",
       "additional_badge": "Top Pick",
       "engine": "Inline",
-      "original_price": "₹13.20 lakh"
+      "original_price": "₹13.20 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Hyundai Creta"
     },
     {
       "id": "e107f85f-1d5b-404c-9059-82fd2bc6a366",
@@ -587,18 +584,18 @@
       "ownership": ["2nd Owner"],
       "registration_year": 2020,
       "km_driven": 51000,
-      "main_image": "https://picsum.photos/seed/used-car-24/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/b2d67243-70b9-478c-bd58-81471381543a/179ee4ea-48db-4ffc-82b7-fa91646d78ed/c7e3e0a2-b25d-4023-968c-0e46fada4b43/slot/2.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-24-1/800/600",
-        "https://picsum.photos/seed/used-car-24-2/800/600",
-        "https://picsum.photos/seed/used-car-24-3/800/600",
-        "https://picsum.photos/seed/used-car-24-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/acc13108-ac85-40e9-833d-7544b0cb5a49/179ee4ea-48db-4ffc-82b7-fa91646d78ed/e0f65b48-3e1e-41c3-b9b2-947564009853/slot/1.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/ee5d7584-3e9a-4109-989d-6196edc9c0a0/179ee4ea-48db-4ffc-82b7-fa91646d78ed/52c3f052-889a-448a-9269-cd8e80b1c5f6/slot/2.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/bf1af6ec-34cf-4499-91ec-b08ad7ebbb19/179ee4ea-48db-4ffc-82b7-fa91646d78ed/8318bdab-92bf-4500-99f6-cf40492b87ae/slot/3.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹4250",
       "emi_per_month": "₹8,514",
       "additional_badge": "Great Deal",
       "engine": "Turbo",
-      "original_price": "₹10.80 lakh"
+      "original_price": "₹10.80 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Hyundai Creta"
     },
     {
       "id": "69d3510b-d8bf-41dc-a881-28f2d734b304",
@@ -612,18 +609,18 @@
       "ownership": ["1st Owner"],
       "registration_year": 2021,
       "km_driven": 37000,
-      "main_image": "https://picsum.photos/seed/used-car-25/800/600",
+      "main_image": "https://marketplace-cdn.cars24.com/production/10112008787/exterior/2025-09-22/car_replace_bg_d90f4e74-6664-4a1e-bd81-387e0e6636f6.png?dpr=2&format=auto&w=700",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-25-1/800/600",
-        "https://picsum.photos/seed/used-car-25-2/800/600",
-        "https://picsum.photos/seed/used-car-25-3/800/600",
-        "https://picsum.photos/seed/used-car-25-4/800/600"
+        "https://marketplace-cdn.cars24.com/production/10112008787/exterior/2025-09-22/car_replace_bg_4d90d395-baaa-4956-b709-f59a5bb87581.png?dpr=2&format=auto&w=700",
+        "https://marketplace-cdn.cars24.com/production/10112008787/exterior/2025-09-22/car_replace_bg_9b9e5cff-75c0-4f9d-84d7-302bc505099e.png?dpr=2&format=auto&w=700",
+        "https://marketplace-cdn.cars24.com/production/10112008787/exterior/2025-09-22/car_replace_bg_45adcd79-d5df-48e2-8701-4b3c5d8b8d2b.png?dpr=2&format=auto&w=700"
       ],
       "discount_price": "₹2781",
       "emi_per_month": "₹7,977",
       "additional_badge": "Budget Pick",
       "engine": "Inline",
-      "original_price": "₹7.40 lakh"
+      "original_price": "₹7.40 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Toyota Innova Crysta"
     },
     {
       "id": "2ff56935-75ba-4c8a-b0d7-9ab3208a40ef",
@@ -637,18 +634,17 @@
       "ownership": ["1st Owner"],
       "registration_year": 2023,
       "km_driven": 9000,
-      "main_image": "https://picsum.photos/seed/used-car-26/800/600",
+      "main_image": "https://marketplace-cdn.cars24.com/production/11439208719/exterior/2025-08-19/car_replace_bg_b2314fae-0d3b-4391-84df-c02396bd8d77.png?dpr=2&format=auto&w=700",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-26-1/800/600",
-        "https://picsum.photos/seed/used-car-26-2/800/600",
-        "https://picsum.photos/seed/used-car-26-3/800/600",
-        "https://picsum.photos/seed/used-car-26-4/800/600"
+        "https://marketplace-cdn.cars24.com/production/11439208719/exterior/2025-08-19/car_replace_bg_d10b3ad4-9c85-43f7-bffc-139a59afc3d4.png?dpr=2&format=auto&w=700",
+        "https://marketplace-cdn.cars24.com/production/11439208719/exterior/2025-08-19/car_replace_bg_67150150-9e37-47c8-8510-96b8e41c571f.png?dpr=2&format=auto&w=700"
       ],
       "discount_price": "₹2980",
       "emi_per_month": "₹7,450",
       "additional_badge": "Premium",
       "engine": "Turbo",
-      "original_price": "₹19.10 lakh"
+      "original_price": "₹19.10 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Honda City"
     },
     {
       "id": "2aa0ae32-0403-499c-aeed-296b726ff59c",
@@ -662,18 +658,18 @@
       "ownership": ["1st Owner"],
       "registration_year": 2022,
       "km_driven": 26000,
-      "main_image": "https://picsum.photos/seed/used-car-27/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/b2d67243-70b9-478c-bd58-81471381543a/179ee4ea-48db-4ffc-82b7-fa91646d78ed/c7e3e0a2-b25d-4023-968c-0e46fada4b43/slot/2.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-27-1/800/600",
-        "https://picsum.photos/seed/used-car-27-2/800/600",
-        "https://picsum.photos/seed/used-car-27-3/800/600",
-        "https://picsum.photos/seed/used-car-27-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/acc13108-ac85-40e9-833d-7544b0cb5a49/179ee4ea-48db-4ffc-82b7-fa91646d78ed/e0f65b48-3e1e-41c3-b9b2-947564009853/slot/1.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/ee5d7584-3e9a-4109-989d-6196edc9c0a0/179ee4ea-48db-4ffc-82b7-fa91646d78ed/52c3f052-889a-448a-9269-cd8e80b1c5f6/slot/2.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/bf1af6ec-34cf-4499-91ec-b08ad7ebbb19/179ee4ea-48db-4ffc-82b7-fa91646d78ed/8318bdab-92bf-4500-99f6-cf40492b87ae/slot/3.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹1921",
       "emi_per_month": "₹14,872",
       "additional_badge": "Assured",
       "engine": "Turbo",
-      "original_price": "₹15.20 lakh"
+      "original_price": "₹15.20 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Hyundai Creta"
     },
     {
       "id": "5b3ed799-9a08-4127-9203-d7cf9f5f11bd",
@@ -687,18 +683,18 @@
       "ownership": ["1st Owner"],
       "registration_year": 2022,
       "km_driven": 24000,
-      "main_image": "https://picsum.photos/seed/used-car-28/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/b2d67243-70b9-478c-bd58-81471381543a/179ee4ea-48db-4ffc-82b7-fa91646d78ed/c7e3e0a2-b25d-4023-968c-0e46fada4b43/slot/2.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-28-1/800/600",
-        "https://picsum.photos/seed/used-car-28-2/800/600",
-        "https://picsum.photos/seed/used-car-28-3/800/600",
-        "https://picsum.photos/seed/used-car-28-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/acc13108-ac85-40e9-833d-7544b0cb5a49/179ee4ea-48db-4ffc-82b7-fa91646d78ed/e0f65b48-3e1e-41c3-b9b2-947564009853/slot/1.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/ee5d7584-3e9a-4109-989d-6196edc9c0a0/179ee4ea-48db-4ffc-82b7-fa91646d78ed/52c3f052-889a-448a-9269-cd8e80b1c5f6/slot/2.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/bf1af6ec-34cf-4499-91ec-b08ad7ebbb19/179ee4ea-48db-4ffc-82b7-fa91646d78ed/8318bdab-92bf-4500-99f6-cf40492b87ae/slot/3.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹4098",
       "emi_per_month": "₹11,213",
       "additional_badge": "Top Pick",
       "engine": "Inline",
-      "original_price": "₹16.90 lakh"
+      "original_price": "₹16.90 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Hyundai Creta"
     },
     {
       "id": "83b6a258-0651-4c9d-8c77-3beb325f4c21",
@@ -712,18 +708,18 @@
       "ownership": ["3rd Owner"],
       "registration_year": 2017,
       "km_driven": 88000,
-      "main_image": "https://picsum.photos/seed/used-car-29/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/b2d67243-70b9-478c-bd58-81471381543a/179ee4ea-48db-4ffc-82b7-fa91646d78ed/c7e3e0a2-b25d-4023-968c-0e46fada4b43/slot/2.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-29-1/800/600",
-        "https://picsum.photos/seed/used-car-29-2/800/600",
-        "https://picsum.photos/seed/used-car-29-3/800/600",
-        "https://picsum.photos/seed/used-car-29-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/acc13108-ac85-40e9-833d-7544b0cb5a49/179ee4ea-48db-4ffc-82b7-fa91646d78ed/e0f65b48-3e1e-41c3-b9b2-947564009853/slot/1.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/ee5d7584-3e9a-4109-989d-6196edc9c0a0/179ee4ea-48db-4ffc-82b7-fa91646d78ed/52c3f052-889a-448a-9269-cd8e80b1c5f6/slot/2.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/bf1af6ec-34cf-4499-91ec-b08ad7ebbb19/179ee4ea-48db-4ffc-82b7-fa91646d78ed/8318bdab-92bf-4500-99f6-cf40492b87ae/slot/3.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹5386",
       "emi_per_month": "₹8,503",
       "additional_badge": "Budget Pick",
       "engine": "Inline",
-      "original_price": "₹8.50 lakh"
+      "original_price": "₹8.50 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Hyundai Creta"
     },
     {
       "id": "93871c60-aebe-42af-923d-8f6f145485a8",
@@ -737,18 +733,215 @@
       "ownership": ["2nd Owner"],
       "registration_year": 2018,
       "km_driven": 61000,
-      "main_image": "https://picsum.photos/seed/used-car-30/800/600",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/277f8138-2b1b-413a-8516-0ff17bf90315/351689b7-616e-441f-b45c-4ad43fc5fa46/9e8c253a-ef61-4602-ac3e-04181b0f4166/slot/1.jpg?w=700&format=auto&dpr=2",
       "sub_image": [
-        "https://picsum.photos/seed/used-car-30-1/800/600",
-        "https://picsum.photos/seed/used-car-30-2/800/600",
-        "https://picsum.photos/seed/used-car-30-3/800/600",
-        "https://picsum.photos/seed/used-car-30-4/800/600"
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/b07332eb-1afc-4a54-84c6-8c1c214576fe/351689b7-616e-441f-b45c-4ad43fc5fa46/be070219-16f3-4311-86ff-8732b6326e77/slot/2.jpg?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/uploads/6a086abfa3d0750f7f58fb8f/dddd6c9d-8c5e-4ab1-94db-a7d3bd1a0339/slot/Odometer-Image---Original.png?w=700&format=auto&dpr=2",
+        "https://media.cars24.com/hello-ar/dev/transformed/uploads/75fbcb8e-b385-4db3-becc-50f43312146b/351689b7-616e-441f-b45c-4ad43fc5fa46/f7784952-c02c-47eb-877b-33a0b379630f/slot/4.jpg?w=700&format=auto&dpr=2"
       ],
       "discount_price": "₹2493",
       "emi_per_month": "₹19,864",
       "additional_badge": "Great Deal",
       "engine": "Inline",
-      "original_price": "₹5.80 lakh"
+      "original_price": "₹5.80 lakh",
+      "image_match_note": "representative CARS24 images matched by similar model/body type: Maruti Suzuki Swift"
+    },
+    {
+      "id": "c1a7f001-1111-4444-8888-000000000001",
+      "slug": "tata-nexon-fearless-plus-2023",
+      "brand": "Tata",
+      "model": "Nexon",
+      "variant": "Fearless Plus",
+      "price": 985000,
+      "discount_price": "₹18,000",
+      "emi_per_month": "₹18,240",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/2c8464ad-4e0c-4cd1-8ca4-4cac348574a6/5a8d8cd3-8323-4ead-a2db-d177919799a9/0e6a99f8-29f8-4b67-9d92-50a2829f9aa6/slot/1.jpg?w=700&format=auto&dpr=2",
+      "sub_image": [],
+      "city": "Ahmedabad",
+      "color": "White",
+      "fuel_type": ["petrol"],
+      "transmission": ["manual"],
+      "body_type": ["SUV"],
+      "ownership": ["1st Owner"],
+      "registration_year": 2023,
+      "km_driven": 18000,
+      "insurance_validity": "2027-02",
+      "seller_type": "Dealer",
+      "featured": true,
+      "rating": 4.8
+    },
+    {
+      "id": "c1a7f002-1111-4444-8888-000000000002",
+      "slug": "hyundai-creta-sx-2022",
+      "brand": "Hyundai",
+      "model": "Creta",
+      "variant": "SX",
+      "price": 1245000,
+      "discount_price": "₹25,000",
+      "emi_per_month": "₹22,950",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/b2d67243-70b9-478c-bd58-81471381543a/179ee4ea-48db-4ffc-82b7-fa91646d78ed/c7e3e0a2-b25d-4023-968c-0e46fada4b43/slot/2.jpg?w=700&format=auto&dpr=2",
+      "sub_image": [],
+      "city": "Surat",
+      "color": "Black",
+      "fuel_type": ["diesel"],
+      "transmission": ["automatic"],
+      "body_type": ["SUV"],
+      "ownership": ["1st Owner"],
+      "registration_year": 2022,
+      "km_driven": 32000,
+      "insurance_validity": "2026-11",
+      "seller_type": "Dealer",
+      "featured": true,
+      "rating": 4.9
+    },
+    {
+      "id": "c1a7f003-1111-4444-8888-000000000003",
+      "slug": "maruti-swift-zxi-2021",
+      "brand": "Maruti Suzuki",
+      "model": "Swift",
+      "variant": "ZXI",
+      "price": 595000,
+      "discount_price": "₹11,000",
+      "emi_per_month": "₹10,980",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/277f8138-2b1b-413a-8516-0ff17bf90315/351689b7-616e-441f-b45c-4ad43fc5fa46/9e8c253a-ef61-4602-ac3e-04181b0f4166/slot/1.jpg?w=700&format=auto&dpr=2",
+      "sub_image": [],
+      "city": "Vadodara",
+      "color": "Red",
+      "fuel_type": ["petrol"],
+      "transmission": ["manual"],
+      "body_type": ["Hatchback"],
+      "ownership": ["1st Owner"],
+      "registration_year": 2021,
+      "km_driven": 27000,
+      "insurance_validity": "2026-09",
+      "seller_type": "Individual",
+      "featured": false,
+      "rating": 4.6
+    },
+
+    {
+      "id": "c1a7f004",
+      "slug": "kia-seltos-htx-2022",
+      "brand": "Kia",
+      "model": "Seltos",
+      "variant": "HTX",
+      "price": 1185000,
+      "discount_price": "₹23,500",
+      "emi_per_month": "₹21,700",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/89241034-2797-4c48-b369-7a8d81862627/70a7c0e8-6366-48e2-bfc3-bc53f64d9490/d270d276-f9d2-4f9c-a6cf-e3cc028e676f/slot/2.jpg?dpr=2&format=auto&w=700",
+      "sub_image": [],
+      "city": "Rajkot",
+      "color": "Blue",
+      "fuel_type": ["petrol"],
+      "transmission": ["automatic"],
+      "body_type": ["SUV"],
+      "ownership": ["1st Owner"],
+      "registration_year": 2022,
+      "km_driven": 29000,
+      "insurance_validity": "2027-03",
+      "seller_type": "Dealer",
+      "featured": true,
+      "rating": 4.7
+    },
+
+    {
+      "id": "c1a7f005",
+      "slug": "honda-city-zx-2020",
+      "brand": "Honda",
+      "model": "City",
+      "variant": "ZX",
+      "price": 895000,
+      "discount_price": "₹15,500",
+      "emi_per_month": "₹16,540",
+      "main_image": "https://marketplace-cdn.cars24.com/production/11439208719/exterior/2025-08-19/car_replace_bg_b2314fae-0d3b-4391-84df-c02396bd8d77.png?dpr=2&format=auto&w=700",
+      "sub_image": [],
+      "city": "Ahmedabad",
+      "color": "Silver",
+      "fuel_type": ["petrol"],
+      "transmission": ["manual"],
+      "body_type": ["Sedan"],
+      "ownership": ["2nd Owner"],
+      "registration_year": 2020,
+      "km_driven": 47000,
+      "insurance_validity": "2026-12",
+      "seller_type": "Dealer",
+      "featured": false,
+      "rating": 4.5
+    },
+
+    {
+      "id": "c1a7f006",
+      "slug": "mahindra-xuv700-ax7-2023",
+      "brand": "Mahindra",
+      "model": "XUV700",
+      "variant": "AX7",
+      "price": 1945000,
+      "discount_price": "₹35,000",
+      "emi_per_month": "₹35,890",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/b2d67243-70b9-478c-bd58-81471381543a/179ee4ea-48db-4ffc-82b7-fa91646d78ed/c7e3e0a2-b25d-4023-968c-0e46fada4b43/slot/2.jpg?w=700&format=auto&dpr=2",
+      "sub_image": [],
+      "city": "Surat",
+      "color": "Midnight Black",
+      "fuel_type": ["diesel"],
+      "transmission": ["automatic"],
+      "body_type": ["SUV"],
+      "ownership": ["1st Owner"],
+      "registration_year": 2023,
+      "km_driven": 12000,
+      "insurance_validity": "2028-01",
+      "seller_type": "Dealer",
+      "featured": true,
+      "rating": 4.9
+    },
+
+    {
+      "id": "c1a7f007",
+      "slug": "toyota-fortuner-4x2-2022",
+      "brand": "Toyota",
+      "model": "Fortuner",
+      "variant": "4x2",
+      "price": 3495000,
+      "discount_price": "₹60,000",
+      "emi_per_month": "₹64,500",
+      "main_image": "https://marketplace-cdn.cars24.com/production/10112008787/exterior/2025-09-22/car_replace_bg_d90f4e74-6664-4a1e-bd81-387e0e6636f6.png?dpr=2&format=auto&w=700",
+      "sub_image": [],
+      "city": "Ahmedabad",
+      "color": "White",
+      "fuel_type": ["diesel"],
+      "transmission": ["automatic"],
+      "body_type": ["SUV"],
+      "ownership": ["1st Owner"],
+      "registration_year": 2022,
+      "km_driven": 38000,
+      "insurance_validity": "2027-06",
+      "seller_type": "Dealer",
+      "featured": true,
+      "rating": 5.0
+    },
+
+    {
+      "id": "c1a7f008",
+      "slug": "tata-punch-adventure-2022",
+      "brand": "Tata",
+      "model": "Punch",
+      "variant": "Adventure",
+      "price": 715000,
+      "discount_price": "₹14,000",
+      "emi_per_month": "₹13,150",
+      "main_image": "https://media.cars24.com/hello-ar/dev/transformed/uploads/m/2c8464ad-4e0c-4cd1-8ca4-4cac348574a6/5a8d8cd3-8323-4ead-a2db-d177919799a9/0e6a99f8-29f8-4b67-9d92-50a2829f9aa6/slot/1.jpg?w=700&format=auto&dpr=2",
+      "sub_image": [],
+      "city": "Bhavnagar",
+      "color": "Orange",
+      "fuel_type": ["petrol"],
+      "transmission": ["manual"],
+      "body_type": ["SUV"],
+      "ownership": ["1st Owner"],
+      "registration_year": 2022,
+      "km_driven": 22000,
+      "insurance_validity": "2027-08",
+      "seller_type": "Individual",
+      "featured": false,
+      "rating": 4.4
     }
   ]
 }

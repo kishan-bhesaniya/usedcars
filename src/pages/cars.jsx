@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTitle,
@@ -23,7 +24,7 @@ import {
   getActiveChips,
   toggleFilterValue,
 } from "@/lib/car-filters";
-import { ChevronDown, CircleX, Filter } from "lucide-react";
+import { ChevronDown, CircleX, Filter, XIcon } from "lucide-react";
 
 function CarsLoadingState() {
   return (
@@ -156,9 +157,21 @@ export default function CarsPage() {
             <SheetContent
               side="left"
               className="w-full max-w-sm overflow-y-auto px-0"
+              showCloseButton={false}
             >
-              <SheetHeader>
+              <SheetHeader className="relative">
                 <SheetTitle>Filter cars</SheetTitle>
+                <SheetClose asChild>
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="icon-sm"
+                    className="absolute top-4 right-4 bg-secondary"
+                  >
+                    <XIcon />
+                    <span className="sr-only">Close filters</span>
+                  </Button>
+                </SheetClose>
               </SheetHeader>
               <div className="px-6 pb-6">
                 <CarsFilterSidebar
