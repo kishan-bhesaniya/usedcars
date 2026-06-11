@@ -86,24 +86,16 @@ function buildInventoryMeta(cars) {
   return {
     brands: [...new Set(cars.map((car) => car.brand).filter(Boolean))].sort(),
     bodyTypes: [
-      ...new Set(
-        cars.flatMap((car) => normalizeListValue(car.body_type).map((item) => item)),
-      ),
+      ...new Set(cars.flatMap((car) => normalizeListValue(car.body_type))),
     ].sort(),
     fuelTypes: [
-      ...new Set(
-        cars.flatMap((car) => normalizeListValue(car.fuel_type).map((item) => item)),
-      ),
+      ...new Set(cars.flatMap((car) => normalizeListValue(car.fuel_type))),
     ].sort(),
     transmissions: [
-      ...new Set(
-        cars.flatMap((car) => normalizeListValue(car.transmission).map((item) => item)),
-      ),
+      ...new Set(cars.flatMap((car) => normalizeListValue(car.transmission))),
     ].sort(),
     ownerships: [
-      ...new Set(
-        cars.flatMap((car) => normalizeListValue(car.ownership).map((item) => item)),
-      ),
+      ...new Set(cars.flatMap((car) => normalizeListValue(car.ownership))),
     ].sort(),
     statuses: [...new Set(cars.map((car) => getCarStatus(car)).filter(Boolean))].sort(),
     priceMin: prices.length > 0 ? Math.min(...prices) : 0,
@@ -138,10 +130,12 @@ function formatCompactPrice(value) {
   }
 
   if (value >= 100000) {
-    return `₹${(value / 100000).toFixed(value >= 1000000 ? 1 : 2)}L`;
+    return `Rs ${Number(
+      (value / 100000).toFixed(value >= 1000000 ? 1 : 2),
+    ).toLocaleString("en-IN")}L`;
   }
 
-  return `₹${value.toLocaleString("en-IN")}`;
+  return `Rs ${value.toLocaleString("en-IN")}`;
 }
 
 function toTitleCase(value) {
@@ -182,7 +176,7 @@ function getActiveChips(filters, meta) {
   }
 
   for (const value of filters.ownerships) {
-    chips.push({ key: `owner-${value}`, label: value });
+    chips.push({ key: `owner-${value}`, label: toTitleCase(value) });
   }
 
   for (const value of filters.statuses) {
@@ -295,7 +289,7 @@ function FilterSidebar({
     return Object.fromEntries(
       meta.ownerships.map((value) => [
         value,
-        cars.filter((car) => normalizeListValue(car.ownership).includes(value.toLowerCase())).length,
+        cars.filter((car) => normalizeListValue(car.ownership).includes(value)).length,
       ]),
     );
   }, [cars, meta.ownerships]);
@@ -433,10 +427,10 @@ function FilterSidebar({
           {meta.ownerships.map((value) => (
             <FilterOption
               key={value}
-              label={value}
+              label={toTitleCase(value)}
               count={ownerCounts[value]}
-              checked={filters.ownerships.includes(value.toLowerCase())}
-              onChange={() => onToggle("ownerships", value.toLowerCase())}
+              checked={filters.ownerships.includes(value)}
+              onChange={() => onToggle("ownerships", value)}
             />
           ))}
         </div>
@@ -506,7 +500,7 @@ function CarCard({ car, index }) {
                 {getCarName(car, index)}
               </p>
               <p className="text-sm text-muted-foreground">
-                {car.registration_year} • {getCarCategory(car)}
+                {car.registration_year} | {getCarCategory(car)}
               </p>
             </div>
             <p className="text-lg font-bold text-slate-900">
@@ -572,7 +566,10 @@ function CarsLoadingState() {
 }
 
 export default function CarsPage() {
-  const cars = Array.isArray(carsData?.data) ? carsData.data : [];
+  const cars = useMemo(
+    () => (Array.isArray(carsData?.data) ? carsData.data : []),
+    [],
+  );
   const meta = useMemo(() => buildInventoryMeta(cars), [cars]);
   const [filters, setFilters] = useState(() => createInitialFilters(meta));
   const isLoading = usePageLoading();
@@ -691,14 +688,17 @@ export default function CarsPage() {
         break;
       default:
         sorted.sort((a, b) => {
-          const statusScore = String(getCarStatus(b)).localeCompare(String(getCarStatus(a)));
+          const statusScore = String(getCarStatus(b)).localeCompare(
+            String(getCarStatus(a)),
+          );
+
           if (statusScore !== 0) {
             return statusScore;
           }
 
           return (b.registration_year ?? 0) - (a.registration_year ?? 0);
         });
-      }
+    }
 
     return sorted;
   }, [cars, filters]);
@@ -710,11 +710,17 @@ export default function CarsPage() {
 
     setFilters((current) => {
       if (field === "minPrice") {
-        const nextMin = Math.max(meta.priceMin, Math.min(safeValue, current.maxPrice));
+        const nextMin = Math.max(
+          meta.priceMin,
+          Math.min(safeValue, current.maxPrice),
+        );
         return { ...current, minPrice: nextMin };
       }
 
-      const nextMax = Math.min(meta.priceMax, Math.max(safeValue, current.minPrice));
+      const nextMax = Math.min(
+        meta.priceMax,
+        Math.max(safeValue, current.minPrice),
+      );
       return { ...current, maxPrice: nextMax };
     });
   };
