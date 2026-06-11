@@ -63,9 +63,9 @@ export default function Dashboard01() {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(12,82,151,0.22),transparent_32%),linear-gradient(180deg,#f7fafc_0%,#eef4f8_52%,#ffffff_100%)]">
-        <SiteHeader title="pre-owned marketplace" />
+        <SiteHeader />
         <main className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-6 lg:px-6 lg:py-8">
-          <section className="overflow-hidden rounded-[2.5rem] bg-[#092746] shadow-2xl shadow-slate-900/15">
+          <section className="overflow-hidden rounded-[40px] bg-[#092746] shadow-2xl shadow-slate-900/15">
             <div className="grid gap-10 px-6 py-8 lg:grid-cols-[1.2fr_0.8fr] lg:px-10 lg:py-12">
               <div className="space-y-6">
                 <Skeleton className="h-8 w-40 bg-white/15" />
@@ -87,8 +87,8 @@ export default function Dashboard01() {
                 </div>
               </div>
               <div className="flex items-center justify-center">
-                <div className="w-full max-w-md space-y-4 rounded-[2rem] border border-white/10 bg-white/8 p-4 backdrop-blur">
-                  <Skeleton className="aspect-4/3 w-full rounded-[1.5rem] bg-white/12" />
+                <div className="w-full max-w-md space-y-4 rounded-[32px] border border-white/10 bg-white/8 p-4 backdrop-blur">
+                  <Skeleton className="aspect-4/3 w-full rounded-[24px] bg-white/12" />
                   <div className="space-y-3">
                     <Skeleton className="h-7 w-2/3 bg-white/15" />
                     <Skeleton className="h-4 w-1/2 bg-white/10" />
@@ -108,9 +108,9 @@ export default function Dashboard01() {
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(12,82,151,0.22),transparent_32%),linear-gradient(180deg,#f7fafc_0%,#eef4f8_52%,#ffffff_100%)]">
-      <SiteHeader title="pre-owned marketplace" />
+      <SiteHeader title="" />
       <main className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-6 lg:px-6 lg:py-8">
-        <section className="overflow-hidden rounded-[2.5rem] bg-[#092746] text-white shadow-2xl shadow-slate-900/15">
+        <section className="overflow-hidden rounded-[40px] bg-[#092746] text-white shadow-2xl shadow-slate-900/15">
           <div className="grid gap-10 px-6 py-8 lg:grid-cols-[1.2fr_0.8fr] lg:px-10 lg:py-12">
             <div className="relative">
               <div className="absolute -top-10 -left-6 h-40 w-40 rounded-full bg-cyan-400/18 blur-3xl" />
@@ -166,7 +166,7 @@ export default function Dashboard01() {
             </div>
             {featuredCar ? (
               <div className="relative flex items-center justify-center">
-                <div className="w-full max-w-md overflow-hidden rounded-[2rem] border border-white/10 bg-white/8 shadow-2xl shadow-slate-950/25 backdrop-blur">
+                <div className="w-full max-w-md overflow-hidden rounded-[32px] border border-white/10 bg-white/8 shadow-2xl shadow-slate-950/25 backdrop-blur">
                   <div className="relative aspect-4/3 overflow-hidden">
                     <img
                       src={getCarImage(featuredCar)}
