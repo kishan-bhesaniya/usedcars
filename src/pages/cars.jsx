@@ -24,7 +24,7 @@ import {
   getActiveChips,
   toggleFilterValue,
 } from "@/lib/car-filters";
-import { ChevronDown, CircleX, Filter, XIcon } from "lucide-react";
+import { CircleX, Filter, XIcon } from "lucide-react";
 
 function CarsLoadingState() {
   return (
@@ -211,7 +211,7 @@ export default function CarsPage() {
                   <select
                     value={filters.sort}
                     onChange={(event) => updateSort(event.target.value)}
-                    className="h-11 min-w-52 appearance-none rounded-full border border-border bg-white px-4 pr-10 text-sm text-slate-800 shadow-sm outline-none"
+                    className="h-11 min-w-52 appearance-none rounded-full border border-border bg-white px-4 text-sm text-slate-800 shadow-sm outline-none"
                   >
                     {SORT_OPTIONS.map((option) => (
                       <option key={option.value} value={option.value}>
@@ -219,7 +219,6 @@ export default function CarsPage() {
                       </option>
                     ))}
                   </select>
-                  <ChevronDown className="pointer-events-none absolute top-1/2 right-4 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                 </label>
               </div>
 
