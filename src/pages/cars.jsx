@@ -202,16 +202,16 @@ export default function CarsPage() {
           {/* sorting,filters and car cards. */}
           <section className="grid gap-4">
             <div className="grid gap-4">
-              <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-                <p className="text-sm font-medium text-primary/80">
+              <div className="flex items-center justify-between gap-3">
+                <p className="min-w-0 text-sm font-medium text-primary/80">
                   {filteredCars.length} cars available
                 </p>
 
-                <label className="relative">
+                <label className="relative shrink-0">
                   <select
                     value={filters.sort}
                     onChange={(event) => updateSort(event.target.value)}
-                    className="h-11 min-w-52 appearance-none rounded-full border border-border bg-white px-4 text-sm text-slate-800 shadow-sm outline-none"
+                    className="h-11 min-w-40 appearance-none rounded-xl border border-border bg-white px-4 text-sm text-slate-800 shadow-sm outline-none sm:min-w-52"
                   >
                     {SORT_OPTIONS.map((option) => (
                       <option key={option.value} value={option.value}>
