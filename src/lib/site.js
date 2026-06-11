@@ -4,7 +4,7 @@ export const siteNavigation = [
   {
     title: "Cars",
     description: "Browse the full used-car catalog",
-    url: "/cars",
+    url: "/car",
     icon: Car,
   },
 ];

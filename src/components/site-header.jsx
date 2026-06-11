@@ -50,7 +50,7 @@ function createSearchItems() {
     id: `car-${car.id ?? index}`,
     title: getCarName(car, index),
     subtitle: getCarCategory(car),
-    url: car.id ? `/cars-details/${car.id}` : "/cars",
+    url: car.id ? `/car-details/${car.id}` : "/car",
     type: "Car",
   }));
 
@@ -288,7 +288,7 @@ function UserMenu() {
           </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={() => navigateTo("/cars")}>
+        <DropdownMenuItem onClick={() => navigateTo("/car")}>
           Browse cars
         </DropdownMenuItem>
       </DropdownMenuContent>

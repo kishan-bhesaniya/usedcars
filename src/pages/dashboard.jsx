@@ -23,7 +23,7 @@ function navigateTo(url) {
 }
 
 function openCarsPage() {
-  navigateTo("/cars");
+  navigateTo("/car");
 }
 
 function focusGlobalSearch() {
