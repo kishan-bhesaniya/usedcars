@@ -84,14 +84,8 @@ export default function CarsPage() {
   const updateRange = (field, minValue, maxValue) => {
     setFilters((current) => {
       if (field === "price") {
-        const nextMin = Math.max(
-          meta.priceMin,
-          Math.min(minValue, meta.priceMax),
-        );
-        const nextMax = Math.min(
-          meta.priceMax,
-          Math.max(maxValue, meta.priceMin),
-        );
+        const nextMin = Math.max(0, Math.min(minValue, meta.priceMax));
+        const nextMax = Math.min(meta.priceMax, Math.max(maxValue, 0));
 
         return {
           ...current,
@@ -117,8 +111,8 @@ export default function CarsPage() {
         };
       }
 
-      const nextMin = Math.max(meta.kmsMin, Math.min(minValue, meta.kmsMax));
-      const nextMax = Math.min(meta.kmsMax, Math.max(maxValue, meta.kmsMin));
+      const nextMin = Math.max(0, Math.min(minValue, meta.kmsMax));
+      const nextMax = Math.min(meta.kmsMax, Math.max(maxValue, 0));
 
       return {
         ...current,
@@ -147,8 +141,8 @@ export default function CarsPage() {
     <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(12,82,151,0.08),transparent_24%),linear-gradient(180deg,#f8fbfd_0%,#eef3f7_100%)]">
       <SiteHeader />
       <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 lg:px-6 lg:py-8">
-        <div className="flex justify-end xl:hidden">
-          <Sheet>
+        {/* <div className="flex justify-end xl:hidden"> */}
+        {/* <Sheet>
             <SheetTrigger asChild>
               <Button
                 type="button"
@@ -181,8 +175,8 @@ export default function CarsPage() {
                 />
               </div>
             </SheetContent>
-          </Sheet>
-        </div>
+          </Sheet> */}
+        {/* </div> */}
 
         <div className="grid gap-6 xl:grid-cols-[320px_minmax(0,1fr)]">
           <aside className="hidden xl:block">
@@ -236,11 +230,11 @@ export default function CarsPage() {
                     <Button
                       type="button"
                       variant="ghost"
-                      size="sm"
-                      className="rounded-full"
+                      size="[2px]"
+                      className="rounded-full gap-1 px-2"
                       onClick={resetFilters}
                     >
-                      <CircleX className="h-4 w-4" />
+                      <CircleX className="h-2 w-4" />
                       Clear all
                     </Button>
                   </div>

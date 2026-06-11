@@ -118,11 +118,11 @@ export function createInitialFilters(meta) {
   return {
     search: "",
     sort: "best-match",
-    minPrice: meta.priceMin,
+    minPrice: 0,
     maxPrice: meta.priceMax,
     minYear: meta.yearMin,
     maxYear: meta.yearMax,
-    minKms: meta.kmsMin,
+    minKms: 0,
     maxKms: meta.kmsMax,
     brands: [],
     bodyTypes: [],
@@ -147,7 +147,7 @@ export function getActiveChips(filters, meta) {
   }
 
   if (
-    filters.minPrice !== meta.priceMin ||
+    filters.minPrice !== 0 ||
     filters.maxPrice !== meta.priceMax
   ) {
     chips.push({
@@ -187,7 +187,7 @@ export function getActiveChips(filters, meta) {
     });
   }
 
-  if (filters.minKms !== meta.kmsMin || filters.maxKms !== meta.kmsMax) {
+  if (filters.minKms !== 0 || filters.maxKms !== meta.kmsMax) {
     chips.push({
       key: "kms",
       label: `${filters.minKms.toLocaleString("en-IN")} km - ${filters.maxKms.toLocaleString("en-IN")} km`,

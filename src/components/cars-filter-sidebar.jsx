@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 import { ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { formatCurrency } from "@/lib/cars";
 import {
   buildFacetCounts,
@@ -108,7 +107,6 @@ export function CarsFilterSidebar({
   filters,
   onRangeChange,
   onToggle,
-  onReset,
 }) {
   const brandCounts = useMemo(
     () => buildFacetCounts(cars, meta.brands, (car) => [car.brand]),
@@ -142,16 +140,6 @@ export function CarsFilterSidebar({
       ),
     [cars, meta.ownerships],
   );
-  const statusCounts = useMemo(
-    () =>
-      buildFacetCounts(cars, meta.statuses, (car) => [
-        car.status ??
-          car.availability ??
-          car.additional_badge ??
-          "Unknown Status",
-      ]),
-    [cars, meta.statuses],
-  );
 
   return (
     <div className="rounded-[28px] border border-border/70 bg-white px-4 shadow-sm">
@@ -171,7 +159,7 @@ export function CarsFilterSidebar({
 
       <FilterSection title="Budget">
         <RangeSlider
-          min={meta.priceMin}
+          min={0}
           max={meta.priceMax}
           step={10000}
           valueMin={filters.minPrice}
@@ -197,7 +185,7 @@ export function CarsFilterSidebar({
 
       <FilterSection title="Kms driven">
         <RangeSlider
-          min={meta.kmsMin}
+          min={0}
           max={meta.kmsMax}
           step={1000}
           valueMin={filters.minKms}
@@ -264,29 +252,6 @@ export function CarsFilterSidebar({
           ))}
         </div>
       </FilterSection>
-
-      <FilterSection title="Deals & badges" defaultOpen={false}>
-        <div className="grid gap-1">
-          {meta.statuses.map((value) => (
-            <FilterOption
-              key={value}
-              label={value}
-              count={statusCounts[value]}
-              checked={filters.statuses.includes(value)}
-              onChange={() => onToggle("statuses", value)}
-            />
-          ))}
-        </div>
-      </FilterSection>
-
-      <Button
-        type="button"
-        variant="outline"
-        className="my-4 h-11 rounded-2xl"
-        onClick={onReset}
-      >
-        Reset all filters
-      </Button>
     </div>
   );
 }

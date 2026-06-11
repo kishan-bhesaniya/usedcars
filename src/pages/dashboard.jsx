@@ -132,7 +132,7 @@ export default function Dashboard01() {
                     onClick={openCarsPage}
                     className="rounded-full cursor-pointer bg-white px-6 text-slate-900 hover:bg-white/90"
                   >
-                    Explore inventory
+                    Explore Car
                   </Button>
                   <Button
                     type="button"
