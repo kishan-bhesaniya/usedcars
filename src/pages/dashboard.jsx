@@ -110,6 +110,7 @@ export default function Dashboard01() {
     <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(12,82,151,0.22),transparent_32%),linear-gradient(180deg,#f7fafc_0%,#eef4f8_52%,#ffffff_100%)]">
       <SiteHeader title="" />
       <main className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-6 lg:px-6 lg:py-8">
+        {/* Hero section. */}
         <section className="overflow-hidden rounded-[40px] bg-[#092746] text-white shadow-2xl shadow-slate-900/15">
           <div className="grid gap-10 px-6 py-8 lg:grid-cols-[1.2fr_0.8fr] lg:px-10 lg:py-12">
             <div className="relative">
@@ -164,6 +165,7 @@ export default function Dashboard01() {
                 </div>
               </div>
             </div>
+            {/* Featured card highlights. */}
             {featuredCar ? (
               <div className="relative flex items-center justify-center">
                 <div className="w-full max-w-md overflow-hidden rounded-[32px] border border-white/10 bg-white/8 shadow-2xl shadow-slate-950/25 backdrop-blur">

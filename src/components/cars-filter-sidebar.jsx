@@ -11,9 +11,9 @@ function FilterSection({ title, children, defaultOpen = true }) {
   return (
     <details
       open={defaultOpen}
-      className="group border-b border-border/70 py-4 last:border-b-0"
+      className="group border-b border-slate-200 py-4 last:border-b-0"
     >
-      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 font-semibold text-slate-900">
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold text-slate-900">
         <span>{title}</span>
         <ChevronDown className="h-4 w-4 text-muted-foreground transition group-open:rotate-180" />
       </summary>
@@ -24,7 +24,7 @@ function FilterSection({ title, children, defaultOpen = true }) {
 
 function FilterOption({ label, count, checked, onChange }) {
   return (
-    <label className="flex cursor-pointer items-center justify-between gap-3 rounded-2xl px-3 py-2 transition hover:bg-slate-50">
+    <label className="flex cursor-pointer items-center justify-between gap-3 rounded-xl px-2 py-2 transition hover:bg-slate-50">
       <span className="flex items-center gap-3">
         <input
           type="checkbox"
@@ -64,7 +64,7 @@ function RangeSlider({
 
   return (
     <div className="grid gap-3">
-      <div className="flex items-center justify-between rounded-2xl bg-slate-50 px-4 py-3 text-sm text-muted-foreground">
+      <div className="flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-muted-foreground">
         <span>{formatValue(safeMin)}</span>
         <span>{formatValue(safeMax)}</span>
       </div>
@@ -142,7 +142,7 @@ export function CarsFilterSidebar({
   );
 
   return (
-    <div className="rounded-[28px] border border-border/70 bg-white px-4 shadow-sm">
+    <div className="border-r-0 bg-transparent px-0">
       <FilterSection title="Model">
         <div className="grid gap-1">
           {meta.brands.map((brand) => (

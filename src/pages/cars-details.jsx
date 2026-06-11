@@ -231,6 +231,7 @@ export default function CarsDetailsPage() {
         </div>
 
         <div className="grid gap-6 xl:grid-cols-[1.4fr_1fr]">
+          {/*left side:main gallery image and thumbnail navigation. */}
           <Card className="overflow-hidden rounded-[32px] pt-0">
             {gallery.length > 0 ? (
               <div className="space-y-4 p-4">
@@ -301,6 +302,7 @@ export default function CarsDetailsPage() {
             )}
           </Card>
 
+          {/* Right side:car title, price, and key purchase details. */}
           <Card className="rounded-[32px]">
             <CardHeader className="gap-3">
               <div className="flex flex-wrap items-center gap-3">
@@ -347,6 +349,7 @@ export default function CarsDetailsPage() {
           </Card>
         </div>
 
+        {/* Section overview. */}
         <Card className="rounded-[32px]">
           <CardHeader>
             <CardTitle className="text-2xl">Overview</CardTitle>

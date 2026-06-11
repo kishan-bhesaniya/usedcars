@@ -8,7 +8,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -141,8 +140,9 @@ export default function CarsPage() {
     <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(12,82,151,0.08),transparent_24%),linear-gradient(180deg,#f8fbfd_0%,#eef3f7_100%)]">
       <SiteHeader />
       <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 lg:px-6 lg:py-8">
-        {/* <div className="flex justify-end xl:hidden"> */}
-        {/* <Sheet>
+        {/* side-bar for mobile */}
+        <div className="flex justify-end lg:hidden">
+          <Sheet>
             <SheetTrigger asChild>
               <Button
                 type="button"
@@ -155,14 +155,10 @@ export default function CarsPage() {
             </SheetTrigger>
             <SheetContent
               side="left"
-              className="w-full max-w-sm overflow-y-auto"
+              className="w-full max-w-sm overflow-y-auto px-0"
             >
               <SheetHeader>
                 <SheetTitle>Filter cars</SheetTitle>
-                <SheetDescription>
-                  Narrow down inventory with the same filter set used on
-                  desktop.
-                </SheetDescription>
               </SheetHeader>
               <div className="px-6 pb-6">
                 <CarsFilterSidebar
@@ -171,15 +167,14 @@ export default function CarsPage() {
                   filters={filters}
                   onRangeChange={updateRange}
                   onToggle={toggleValue}
-                  onReset={resetFilters}
                 />
               </div>
             </SheetContent>
-          </Sheet> */}
-        {/* </div> */}
+          </Sheet>
+        </div>
 
-        <div className="grid gap-6 xl:grid-cols-[320px_minmax(0,1fr)]">
-          <aside className="hidden xl:block">
+        <div className="grid gap-6 lg:grid-cols-[320px_minmax(0,1fr)]">
+          <aside className="hidden lg:block">
             <div className="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pr-2">
               <CarsFilterSidebar
                 cars={cars}
@@ -187,89 +182,87 @@ export default function CarsPage() {
                 filters={filters}
                 onRangeChange={updateRange}
                 onToggle={toggleValue}
-                onReset={resetFilters}
               />
             </div>
           </aside>
 
+          {/* sorting,filters and car cards. */}
           <section className="grid gap-4">
-            <Card className="rounded-[32px] border border-border/70 pt-0 shadow-sm">
-              <CardContent className="grid gap-4 p-4 sm:p-6">
-                <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-                  <p className="text-sm font-medium text-primary/80">
-                    {filteredCars.length} cars available
-                  </p>
+            <div className="grid gap-4">
+              <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                <p className="text-sm font-medium text-primary/80">
+                  {filteredCars.length} cars available
+                </p>
 
-                  <label className="relative">
-                    <select
-                      value={filters.sort}
-                      onChange={(event) => updateSort(event.target.value)}
-                      className="h-11 min-w-52 appearance-none rounded-full border border-border bg-white px-4 pr-10 text-sm text-slate-800 shadow-sm outline-none"
+                <label className="relative">
+                  <select
+                    value={filters.sort}
+                    onChange={(event) => updateSort(event.target.value)}
+                    className="h-11 min-w-52 appearance-none rounded-full border border-border bg-white px-4 pr-10 text-sm text-slate-800 shadow-sm outline-none"
+                  >
+                    {SORT_OPTIONS.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronDown className="pointer-events-none absolute top-1/2 right-4 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                </label>
+              </div>
+
+              {activeChips.length > 0 ? (
+                <div className="flex flex-wrap gap-2">
+                  {activeChips.map((chip) => (
+                    <Badge
+                      key={chip.key}
+                      variant="secondary"
+                      className="rounded-full px-3 py-1"
                     >
-                      {SORT_OPTIONS.map((option) => (
-                        <option key={option.value} value={option.value}>
-                          {option.label}
-                        </option>
-                      ))}
-                    </select>
-                    <ChevronDown className="pointer-events-none absolute top-1/2 right-4 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                  </label>
+                      {chip.label}
+                    </Badge>
+                  ))}
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="[2px]"
+                    className="rounded-full gap-1 px-2"
+                    onClick={resetFilters}
+                  >
+                    <CircleX className="h-2 w-4" />
+                    Clear all
+                  </Button>
                 </div>
+              ) : null}
 
-                {activeChips.length > 0 ? (
-                  <div className="flex flex-wrap gap-2">
-                    {activeChips.map((chip) => (
-                      <Badge
-                        key={chip.key}
-                        variant="secondary"
-                        className="rounded-full px-3 py-1"
-                      >
-                        {chip.label}
-                      </Badge>
-                    ))}
-                    <Button
-                      type="button"
-                      variant="ghost"
-                      size="[2px]"
-                      className="rounded-full gap-1 px-2"
-                      onClick={resetFilters}
-                    >
-                      <CircleX className="h-2 w-4" />
-                      Clear all
-                    </Button>
-                  </div>
-                ) : null}
-
-                {filteredCars.length === 0 ? (
-                  <div className="rounded-[24px] border border-dashed border-border/70 bg-slate-50 p-8 text-center">
-                    <p className="text-lg font-semibold text-slate-900">
-                      No cars found
-                    </p>
-                    <p className="mt-2 text-sm text-muted-foreground">
-                      Try widening your budget or removing a few filters.
-                    </p>
-                    <Button
-                      type="button"
-                      variant="outline"
-                      className="mt-4 rounded-full"
-                      onClick={resetFilters}
-                    >
-                      Reset filters
-                    </Button>
-                  </div>
-                ) : (
-                  <div className="grid gap-4 md:grid-cols-2 2xl:grid-cols-3">
-                    {filteredCars.map((car, index) => (
-                      <CarCard
-                        key={car.id ?? car.name ?? index}
-                        car={car}
-                        index={index}
-                      />
-                    ))}
-                  </div>
-                )}
-              </CardContent>
-            </Card>
+              {filteredCars.length === 0 ? (
+                <div className="rounded-[24px] border border-dashed border-border/70 bg-slate-50 p-8 text-center">
+                  <p className="text-lg font-semibold text-slate-900">
+                    No cars found
+                  </p>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Try widening your budget or removing a few filters.
+                  </p>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="mt-4 rounded-full"
+                    onClick={resetFilters}
+                  >
+                    Reset filters
+                  </Button>
+                </div>
+              ) : (
+                <div className="grid gap-4 md:grid-cols-2 2xl:grid-cols-3">
+                  {filteredCars.map((car, index) => (
+                    <CarCard
+                      key={car.id ?? car.name ?? index}
+                      car={car}
+                      index={index}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
           </section>
         </div>
       </main>
