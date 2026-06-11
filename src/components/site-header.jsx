@@ -11,15 +11,6 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -28,12 +19,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import {
-  EllipsisVerticalIcon,
-  MenuIcon,
-  SearchIcon,
-  XIcon,
-} from "lucide-react";
+import { EllipsisVerticalIcon, SearchIcon, XIcon } from "lucide-react";
 
 function navigateTo(url) {
   if (!url || window.location.pathname === url) {
@@ -99,22 +85,21 @@ function SearchResults({ items, onSelect, onClear }) {
 function HeaderSearch() {
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const normalizedQuery = query.trim();
 
   const results = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase();
-
     if (!normalizedQuery) {
-      return searchItems.slice(0, 6);
+      return [];
     }
 
     return searchItems
       .filter((item) =>
         `${item.title} ${item.subtitle} ${item.type}`
           .toLowerCase()
-          .includes(normalizedQuery),
+          .includes(normalizedQuery.toLowerCase()),
       )
       .slice(0, 8);
-  }, [query]);
+  }, [normalizedQuery]);
 
   const submitSearch = () => {
     const firstMatch = results[0];
@@ -164,7 +149,7 @@ function HeaderSearch() {
           <XIcon className="h-4 w-4" />
         </button>
       ) : null}
-      {isOpen ? (
+      {isOpen && normalizedQuery ? (
         <SearchResults
           items={results}
           onSelect={navigateTo}
@@ -195,58 +180,6 @@ function DesktopNavigation({ pathname }) {
         ))}
       </NavigationMenuList>
     </NavigationMenu>
-  );
-}
-
-function MobileNavigation({ pathname }) {
-  return (
-    <Sheet>
-      <SheetTrigger asChild>
-        <Button
-          type="button"
-          variant="outline"
-          size="icon"
-          className="rounded-full md:hidden"
-          aria-label="Open navigation menu"
-        >
-          <MenuIcon className="h-5 w-5" />
-        </Button>
-      </SheetTrigger>
-      <SheetContent side="left" className="w-full max-w-xs">
-        <SheetHeader>
-          <SheetTitle>Navigation</SheetTitle>
-          <SheetDescription>
-            Jump across the UsedCars experience.
-          </SheetDescription>
-        </SheetHeader>
-        <div className="flex flex-col gap-2 px-6 pb-6">
-          {siteNavigation.map((item) => {
-            const Icon = item.icon;
-
-            return (
-              <SheetClose asChild key={item.url}>
-                <a
-                  href={item.url}
-                  className={`flex items-center gap-3 rounded-2xl border px-4 py-3 transition ${
-                    pathname === item.url
-                      ? "border-primary bg-primary/8 text-primary"
-                      : "border-border hover:bg-muted/70"
-                  }`}
-                >
-                  <Icon className="h-5 w-5" />
-                  <div>
-                    <p className="font-medium">{item.title}</p>
-                    <p className="text-sm text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </div>
-                </a>
-              </SheetClose>
-            );
-          })}
-        </div>
-      </SheetContent>
-    </Sheet>
   );
 }
 
@@ -296,13 +229,12 @@ function UserMenu() {
   );
 }
 
-export function SiteHeader({ title = "Dashboard" }) {
+export function SiteHeader() {
   const pathname = window.location.pathname || "/";
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/88 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-7xl items-center gap-3 px-4 py-4 lg:px-6">
-        <MobileNavigation pathname={pathname} />
         <a href="/" className="flex min-w-0 items-center gap-3">
           <img
             src="/logo.png"
@@ -313,13 +245,11 @@ export function SiteHeader({ title = "Dashboard" }) {
             <p className="truncate text-sm font-semibold tracking-[0.24em] text-primary uppercase">
               UsedCars
             </p>
-            <p className="truncate text-sm text-muted-foreground">{title}</p>
           </div>
         </a>
         <DesktopNavigation pathname={pathname} />
         <div className="ml-auto flex flex-1 items-center justify-end gap-3">
           <HeaderSearch />
-          <UserMenu />
         </div>
       </div>
     </header>

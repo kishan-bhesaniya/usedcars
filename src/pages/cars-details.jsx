@@ -68,7 +68,7 @@ export default function CarsDetailsPage() {
           </div>
 
           <div className="grid gap-6 xl:grid-cols-[1.4fr_1fr]">
-            <Card className="overflow-hidden rounded-[2rem] pt-0">
+            <Card className="overflow-hidden rounded-[32px] pt-0">
               <div className="space-y-4 p-4">
                 <Skeleton className="aspect-16/10 w-full rounded-3xl" />
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
@@ -82,7 +82,7 @@ export default function CarsDetailsPage() {
               </div>
             </Card>
 
-            <Card className="rounded-[2rem]">
+            <Card className="rounded-[32px]">
               <CardHeader className="gap-3">
                 <div className="flex flex-wrap items-center gap-3">
                   <Skeleton className="h-8 w-2/3" />
@@ -105,7 +105,7 @@ export default function CarsDetailsPage() {
             </Card>
           </div>
 
-          <Card className="rounded-[2rem]">
+          <Card className="rounded-[32px]">
             <CardHeader>
               <Skeleton className="h-8 w-40" />
             </CardHeader>
@@ -131,7 +131,7 @@ export default function CarsDetailsPage() {
       <div className="min-h-screen bg-[linear-gradient(180deg,#f8fbfd_0%,#eef3f7_100%)]">
         <SiteHeader title="Car details" />
         <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 lg:px-6 lg:py-8">
-          <Card className="rounded-[2rem]">
+          <Card className="rounded-[32px]">
             <CardContent className="flex flex-col items-start gap-4 p-6">
               <p className="text-lg font-semibold">Car not found</p>
               <p className="text-muted-foreground text-sm">
@@ -231,7 +231,8 @@ export default function CarsDetailsPage() {
         </div>
 
         <div className="grid gap-6 xl:grid-cols-[1.4fr_1fr]">
-          <Card className="overflow-hidden rounded-[2rem] pt-0">
+          {/*left side:main gallery image and thumbnail navigation. */}
+          <Card className="overflow-hidden rounded-[32px] pt-0">
             {gallery.length > 0 ? (
               <div className="space-y-4 p-4">
                 <div className="relative overflow-hidden rounded-3xl border bg-muted">
@@ -301,7 +302,8 @@ export default function CarsDetailsPage() {
             )}
           </Card>
 
-          <Card className="rounded-[2rem]">
+          {/* Right side:car title, price, and key purchase details. */}
+          <Card className="rounded-[32px]">
             <CardHeader className="gap-3">
               <div className="flex flex-wrap items-center gap-3">
                 <CardTitle className="text-2xl">{getCarName(car)}</CardTitle>
@@ -347,7 +349,8 @@ export default function CarsDetailsPage() {
           </Card>
         </div>
 
-        <Card className="rounded-[2rem]">
+        {/* Section overview. */}
+        <Card className="rounded-[32px]">
           <CardHeader>
             <CardTitle className="text-2xl">Overview</CardTitle>
           </CardHeader>

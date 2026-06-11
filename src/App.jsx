@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Dashboard01 from "./pages/dashboard";
-import CarsPage from "./pages/cars-page";
 import CarsDetailsPage from "./pages/cars-details";
-
+import CarsPage from "./pages/cars";
 function getCurrentPath() {
   return window.location.pathname || "/";
 }
