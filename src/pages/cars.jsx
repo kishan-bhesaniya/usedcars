@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import carsData from "../../cars.json";
 import { CarCard } from "@/components/car-card";
 import { CarsFilterSidebar } from "@/components/cars-filter-sidebar";
+import { SiteFooter } from "@/components/site-footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -55,6 +56,7 @@ function CarsLoadingState() {
           </div>
         </div>
       </main>
+      <SiteFooter />
     </div>
   );
 }
@@ -279,6 +281,7 @@ export default function CarsPage() {
           </section>
         </div>
       </main>
+      <SiteFooter />
     </div>
   );
 }

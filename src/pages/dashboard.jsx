@@ -1,4 +1,5 @@
 import carsData from "../../cars.json";
+import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -102,6 +103,7 @@ export default function Dashboard01() {
             </div>
           </section>
         </main>
+        <SiteFooter />
       </div>
     );
   }
@@ -207,6 +209,7 @@ export default function Dashboard01() {
           </div>
         </section>
       </main>
+      <SiteFooter />
     </div>
   );
 }

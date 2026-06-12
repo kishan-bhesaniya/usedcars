@@ -10,6 +10,7 @@ import {
   Settings,
   Tag,
 } from "lucide-react";
+import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -122,6 +123,7 @@ export default function CarsDetailsPage() {
             </CardContent>
           </Card>
         </main>
+        <SiteFooter />
       </div>
     );
   }
@@ -147,6 +149,7 @@ export default function CarsDetailsPage() {
             </CardContent>
           </Card>
         </main>
+        <SiteFooter />
       </div>
     );
   }
@@ -366,6 +369,7 @@ export default function CarsDetailsPage() {
           </CardContent>
         </Card>
       </main>
+      <SiteFooter />
     </div>
   );
 }
