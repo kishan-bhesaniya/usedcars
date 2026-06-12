@@ -35,20 +35,20 @@ function CarsLoadingState() {
           <Skeleton className="h-4 w-28" />
           <Skeleton className="h-10 w-full max-w-2xl" />
         </div>
-        <div className="grid gap-6 xl:grid-cols-[320px_minmax(0,1fr)]">
+        <div className="grid gap-6 xl:grid-cols-[280px_minmax(0,1fr)]">
           <div className="grid gap-4">
             {Array.from({ length: 5 }).map((_, index) => (
               <Skeleton key={index} className="h-36 rounded-[28px]" />
             ))}
           </div>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {Array.from({ length: 6 }).map((_, index) => (
               <Card key={index} className="overflow-hidden pt-0">
-                <Skeleton className="h-56 w-full rounded-none" />
+                <Skeleton className="h-52 w-full rounded-none" />
                 <CardContent className="grid gap-3 p-4">
                   <Skeleton className="h-5 w-2/3" />
                   <Skeleton className="h-4 w-1/2" />
-                  <Skeleton className="h-24 w-full rounded-3xl" />
+                  <Skeleton className="h-[5.5rem] w-full rounded-3xl" />
                 </CardContent>
               </Card>
             ))}
@@ -186,7 +186,7 @@ export default function CarsPage() {
           </Sheet>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[320px_minmax(0,1fr)]">
+        <div className="grid gap-6 lg:grid-cols-[280px_minmax(0,1fr)]">
           <aside className="hidden lg:block">
             <div className="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pr-2">
               <CarsFilterSidebar
@@ -264,7 +264,7 @@ export default function CarsPage() {
                   </Button>
                 </div>
               ) : (
-                <div className="grid gap-4 md:grid-cols-2 2xl:grid-cols-3">
+                <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
                   {filteredCars.map((car, index) => (
                     <CarCard
                       key={car.id ?? car.name ?? index}

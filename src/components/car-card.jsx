@@ -25,7 +25,7 @@ export function CarCard({ car, index }) {
   const status = getCarStatus(car);
 
   return (
-    <Card className="overflow-hidden rounded-[28px] border border-border/70 pt-0 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+    <Card className="h-full overflow-hidden rounded-[28px] border border-border/70 pt-0 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
       <button
         type="button"
         onClick={() => openCarDetails(car.id)}
@@ -36,10 +36,10 @@ export function CarCard({ car, index }) {
             <img
               src={imageUrl}
               alt={getCarName(car, index)}
-              className="h-56 w-full object-cover"
+              className="h-52 w-full object-cover"
             />
           ) : (
-            <div className="bg-muted text-muted-foreground flex h-56 w-full items-center justify-center text-sm">
+            <div className="bg-muted text-muted-foreground flex h-52 w-full items-center justify-center text-sm">
               No image available
             </div>
           )}
@@ -50,24 +50,24 @@ export function CarCard({ car, index }) {
           ) : null}
         </div>
       </button>
-      <CardContent className="grid gap-4 p-5">
+      <CardContent className="grid gap-3 p-4">
         <div className="space-y-1">
-          <div className="flex items-start justify-between gap-4">
-            <div>
-              <p className="text-lg font-semibold text-slate-900">
+          <div className="flex items-start justify-between gap-3">
+            <div className="min-w-0 flex-1">
+              <p className="text-base font-semibold leading-snug text-slate-900">
                 {getCarName(car, index)}
               </p>
               <p className="text-sm text-muted-foreground">
                 {car.registration_year} | {getCarCategory(car)}
               </p>
             </div>
-            <p className="text-lg font-bold text-slate-900">
+            <p className="shrink-0 text-base font-bold text-slate-900">
               {formatCurrency(car.price)}
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 rounded-[24px] bg-slate-50 p-3 text-sm">
+        <div className="grid grid-cols-2 gap-2.5 rounded-[24px] bg-slate-50 p-3 text-sm">
           <div className="flex items-center gap-2 text-slate-700">
             <Gauge className="h-4 w-4 text-primary" />
             <span>{car.km_driven?.toLocaleString("en-IN")} km</span>
