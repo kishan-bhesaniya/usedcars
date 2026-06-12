@@ -252,7 +252,7 @@ export default function CarsDetailsPage() {
                         size="icon"
                         variant="secondary"
                         onClick={showPreviousImage}
-                        className="absolute top-1/2 left-2 h-4 w-8 -translate-y-1/2 rounded-full shadow-sm sm:left-4 sm:h-10 sm:w-10"
+                        className="absolute top-1/2 left-2 h-6 w-6 rounded-full shadow-sm sm:h-10 sm:w-10"
                         aria-label="Show previous photo"
                       >
                         <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -262,7 +262,7 @@ export default function CarsDetailsPage() {
                         size="icon"
                         variant="secondary"
                         onClick={showNextImage}
-                        className="absolute top-1/2 right-2 h-4 w-8 -translate-y-1/2 rounded-full shadow-sm sm:right-4 sm:h-10 sm:w-10"
+                        className="absolute top-1/2 right-2 h-6 w-6 rounded-full shadow-sm sm:h-10 sm:w-10"
                         aria-label="Show next photo"
                       >
                         <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
