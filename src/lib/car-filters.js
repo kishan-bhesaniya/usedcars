@@ -117,7 +117,7 @@ export function buildInventoryMeta(cars) {
 export function createInitialFilters(meta) {
   return {
     search: "",
-    sort: "best-match",
+    sort: "",
     minPrice: 0,
     maxPrice: meta.priceMax,
     minYear: meta.yearMin,

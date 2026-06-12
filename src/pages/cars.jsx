@@ -48,7 +48,7 @@ function CarsLoadingState() {
                 <CardContent className="grid gap-3 p-4">
                   <Skeleton className="h-5 w-2/3" />
                   <Skeleton className="h-4 w-1/2" />
-                  <Skeleton className="h-[5.5rem] w-full rounded-3xl" />
+                  <Skeleton className="h-22 w-full rounded-3xl" />
                 </CardContent>
               </Card>
             ))}
@@ -213,6 +213,7 @@ export default function CarsPage() {
                     onChange={(event) => updateSort(event.target.value)}
                     className="h-11 min-w-40 appearance-none rounded-xl border border-border bg-white px-4 text-sm text-slate-800 shadow-sm outline-none sm:min-w-52"
                   >
+                    <option value="">Select filter</option>
                     {SORT_OPTIONS.map((option) => (
                       <option key={option.value} value={option.value}>
                         {option.label}
