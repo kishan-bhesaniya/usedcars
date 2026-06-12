@@ -1,28 +1,19 @@
 import { useState } from "react";
 import carsData from "../../cars.json";
-import {
-  ArrowLeft,
-  Calendar,
-  ChevronLeft,
-  ChevronRight,
-  Fuel,
-  Gauge,
-  Settings,
-  Tag,
-} from "lucide-react";
+import { ArrowLeft, Calendar, Fuel, Gauge, Settings, Tag } from "lucide-react";
+import { CarDetailsGallery } from "@/components/car-details/car-details-gallery";
+import { CarDetailsNotFound } from "@/components/car-details/car-details-not-found";
+import { CarDetailsOverview } from "@/components/car-details/car-details-overview";
+import { CarDetailsSkeleton } from "@/components/car-details/car-details-skeleton";
+import { CarDetailsSummary } from "@/components/car-details/car-details-summary";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
 import { usePageLoading } from "@/hooks/use-page-loading";
 import {
   formatCurrency,
   formatList,
-  getCarCategory,
   getCarGallery,
-  getCarName,
   getCarStatus,
 } from "@/lib/cars";
 
@@ -38,18 +29,6 @@ function navigateToCars() {
   window.dispatchEvent(new PopStateEvent("popstate"));
 }
 
-function DetailItem({ label, value, icon: Icon }) {
-  return (
-    <div className="border-border border-b py-4 last:border-b-0">
-      <div className="text-muted-foreground mb-2 flex items-center gap-2 text-sm">
-        <Icon className="h-4 w-4" />
-        <span>{label}</span>
-      </div>
-      <p className="text-base font-semibold">{value}</p>
-    </div>
-  );
-}
-
 export default function CarsDetailsPage() {
   const cars = Array.isArray(carsData?.data) ? carsData.data : [];
   const carId = getCurrentCarId();
@@ -63,66 +42,7 @@ export default function CarsDetailsPage() {
     return (
       <div className="min-h-screen bg-[linear-gradient(180deg,#f8fbfd_0%,#eef3f7_100%)]">
         <SiteHeader title="Car details" />
-        <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6">
-          <div className="mb-2">
-            <Skeleton className="h-10 w-36 rounded-full" />
-          </div>
-
-          <div className="grid gap-6 xl:grid-cols-[1.4fr_1fr]">
-            <Card className="overflow-hidden rounded-[32px] pt-0">
-              <div className="space-y-4 p-4">
-                <Skeleton className="aspect-16/10 w-full rounded-3xl" />
-                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-                  {Array.from({ length: 4 }).map((_, index) => (
-                    <Skeleton
-                      key={index}
-                      className="aspect-4/3 w-full rounded-2xl"
-                    />
-                  ))}
-                </div>
-              </div>
-            </Card>
-
-            <Card className="rounded-[32px]">
-              <CardHeader className="gap-3">
-                <div className="flex flex-wrap items-center gap-3">
-                  <Skeleton className="h-8 w-2/3" />
-                  <Skeleton className="h-6 w-20 rounded-full" />
-                </div>
-                <Skeleton className="h-4 w-1/2" />
-                <Skeleton className="h-10 w-32" />
-              </CardHeader>
-              <CardContent className="grid gap-4">
-                {Array.from({ length: 6 }).map((_, index) => (
-                  <div
-                    key={index}
-                    className="border-border border-b py-4 last:border-b-0"
-                  >
-                    <Skeleton className="mb-2 h-4 w-1/3" />
-                    <Skeleton className="h-5 w-2/3" />
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          </div>
-
-          <Card className="rounded-[32px]">
-            <CardHeader>
-              <Skeleton className="h-8 w-40" />
-            </CardHeader>
-            <CardContent className="grid gap-x-6 gap-y-4 md:grid-cols-2 xl:grid-cols-3">
-              {Array.from({ length: 6 }).map((_, index) => (
-                <div
-                  key={index}
-                  className="border-border border-b py-4 last:border-b-0"
-                >
-                  <Skeleton className="mb-2 h-4 w-1/3" />
-                  <Skeleton className="h-5 w-2/3" />
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-        </main>
+        <CarDetailsSkeleton />
         <SiteFooter />
       </div>
     );
@@ -132,23 +52,7 @@ export default function CarsDetailsPage() {
     return (
       <div className="min-h-screen bg-[linear-gradient(180deg,#f8fbfd_0%,#eef3f7_100%)]">
         <SiteHeader title="Car details" />
-        <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6">
-          <Card className="rounded-[32px]">
-            <CardContent className="flex flex-col items-start gap-4 p-6">
-              <p className="text-lg font-semibold">Car not found</p>
-              <p className="text-muted-foreground text-sm">
-                The selected car could not be loaded.
-              </p>
-              <Button
-                type="button"
-                className="rounded-full "
-                onClick={navigateToCars}
-              >
-                Back to Cars
-              </Button>
-            </CardContent>
-          </Card>
-        </main>
+        <CarDetailsNotFound onBack={navigateToCars} />
         <SiteFooter />
       </div>
     );
@@ -233,139 +137,19 @@ export default function CarsDetailsPage() {
           </Button>
         </div>
         <div className="grid gap-6 xl:grid-cols-[1.4fr_1fr]">
-          {/*Main image and navigation. */}
-          <Card className="overflow-hidden rounded-[32px] pt-0">
-            {gallery.length > 0 ? (
-              <div className="space-y-3 p-3 sm:space-y-4 sm:p-4">
-                <div className="relative overflow-hidden rounded-[24px] border bg-muted sm:rounded-3xl">
-                  <img
-                    src={selectedImage}
-                    alt={`${getCarName(car)} image ${selectedImageIndex + 1}`}
-                    className="aspect-16/10 w-full object-cover"
-                  />
-
-                  {gallery.length > 1 ? (
-                    <>
-                      <Button
-                        type="button"
-                        size="icon"
-                        variant="secondary"
-                        onClick={showPreviousImage}
-                        className="absolute top-1/2 left-2 h-6 w-6 rounded-full shadow-sm sm:h-10 sm:w-10"
-                        aria-label="Show previous photo"
-                      >
-                        <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
-                      </Button>
-                      <Button
-                        type="button"
-                        size="icon"
-                        variant="secondary"
-                        onClick={showNextImage}
-                        className="absolute top-1/2 right-2 h-6 w-6 rounded-full shadow-sm sm:h-10 sm:w-10"
-                        aria-label="Show next photo"
-                      >
-                        <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
-                      </Button>
-                      <div className="absolute right-2 bottom-2 rounded-full bg-black/65 px-2.5 py-1 text-[11px] font-medium text-white sm:right-4 sm:bottom-4 sm:px-3 sm:text-xs">
-                        {selectedImageIndex + 1} / {gallery.length}
-                      </div>
-                    </>
-                  ) : null}
-                </div>
-
-                {gallery.length > 1 ? (
-                  <div className="grid grid-cols-3 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-4">
-                    {gallery.map((image, index) => (
-                      <button
-                        key={`${image}-${index}`}
-                        type="button"
-                        onClick={() => setPhotoState({ carId, index })}
-                        className={`overflow-hidden rounded-xl border transition sm:rounded-2xl ${
-                          selectedImageIndex === index
-                            ? "ring-primary border-primary ring-2"
-                            : "border-border hover:border-primary/50"
-                        }`}
-                        aria-label={`Show photo ${index + 1}`}
-                      >
-                        <img
-                          src={image}
-                          alt={`${getCarName(car)} view ${index + 1}`}
-                          className="aspect-4/3 w-full object-cover"
-                        />
-                      </button>
-                    ))}
-                  </div>
-                ) : null}
-              </div>
-            ) : (
-              <div className="bg-muted text-muted-foreground flex aspect-16/10 items-center justify-center">
-                No image available
-              </div>
-            )}
-          </Card>
-
-          {/*Car title, price, and key purchase details. */}
-          <Card className="rounded-[32px]">
-            <CardHeader className="gap-3">
-              <div className="flex flex-wrap items-center gap-3">
-                <CardTitle className="text-2xl">{getCarName(car)}</CardTitle>
-                {status ? <Badge variant="">{status}</Badge> : null}
-              </div>
-              <p className="text-muted-foreground text-sm">
-                {getCarCategory(car)}
-              </p>
-              <p className="text-3xl font-bold">{formatCurrency(car.price)}</p>
-            </CardHeader>
-            <CardContent className="grid gap-0">
-              <DetailItem
-                label="Variant"
-                value={car.variant || "N/A"}
-                icon={Tag}
-              />
-              <DetailItem
-                label="Ownership"
-                value={formatList(car.ownership)}
-                icon={Tag}
-              />
-              <DetailItem
-                label="Engine"
-                value={car.engine || "N/A"}
-                icon={Settings}
-              />
-              <DetailItem
-                label="EMI Per Month"
-                value={car.emi_per_month || "N/A"}
-                icon={Tag}
-              />
-              <DetailItem
-                label="Original Price"
-                value={car.original_price || "N/A"}
-                icon={Tag}
-              />
-              <DetailItem
-                label="Discount"
-                value={car.discount_price || "N/A"}
-                icon={Tag}
-              />
-            </CardContent>
-          </Card>
+          <CarDetailsGallery
+            car={car}
+            carId={carId}
+            gallery={gallery}
+            selectedImage={selectedImage}
+            selectedImageIndex={selectedImageIndex}
+            onSelectImage={setPhotoState}
+            onShowPreviousImage={showPreviousImage}
+            onShowNextImage={showNextImage}
+          />
+          <CarDetailsSummary car={car} status={status} />
         </div>
-        {/* Section overview. */}
-        <Card className="rounded-[32px]">
-          <CardHeader>
-            <CardTitle className="text-2xl">Overview</CardTitle>
-          </CardHeader>
-          <CardContent className="grid gap-x-6 md:grid-cols-2 xl:grid-cols-3">
-            {specs.map((spec) => (
-              <DetailItem
-                key={spec.label}
-                label={spec.label}
-                value={spec.value}
-                icon={spec.icon}
-              />
-            ))}
-          </CardContent>
-        </Card>
+        <CarDetailsOverview specs={specs} />
       </main>
       <SiteFooter />
     </div>
