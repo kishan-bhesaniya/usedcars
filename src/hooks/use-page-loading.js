@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function usePageLoading(dependencies = [], delay = 500) {
+export function usePageLoading(dependencies = [], delay = 700) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
