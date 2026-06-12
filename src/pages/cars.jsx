@@ -10,6 +10,7 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
+  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -163,6 +164,7 @@ export default function CarsPage() {
             >
               <SheetHeader className="relative">
                 <SheetTitle>Filter cars</SheetTitle>
+                <SheetDescription></SheetDescription>
                 <SheetClose asChild>
                   <Button
                     type="button"
