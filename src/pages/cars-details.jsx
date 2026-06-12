@@ -63,7 +63,7 @@ export default function CarsDetailsPage() {
     return (
       <div className="min-h-screen bg-[linear-gradient(180deg,#f8fbfd_0%,#eef3f7_100%)]">
         <SiteHeader title="Car details" />
-        <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 lg:px-6 lg:py-8">
+        <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6">
           <div className="mb-2">
             <Skeleton className="h-10 w-36 rounded-full" />
           </div>
@@ -132,7 +132,7 @@ export default function CarsDetailsPage() {
     return (
       <div className="min-h-screen bg-[linear-gradient(180deg,#f8fbfd_0%,#eef3f7_100%)]">
         <SiteHeader title="Car details" />
-        <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 lg:px-6 lg:py-8">
+        <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6">
           <Card className="rounded-[32px]">
             <CardContent className="flex flex-col items-start gap-4 p-6">
               <p className="text-lg font-semibold">Car not found</p>
@@ -141,7 +141,7 @@ export default function CarsDetailsPage() {
               </p>
               <Button
                 type="button"
-                className="rounded-full"
+                className="rounded-full "
                 onClick={navigateToCars}
               >
                 Back to Cars
@@ -220,21 +220,20 @@ export default function CarsDetailsPage() {
   return (
     <div className="min-h-screen bg-[linear-gradient(180deg,#f8fbfd_0%,#eef3f7_100%)]">
       <SiteHeader title="Car details" />
-      <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 lg:px-6 lg:py-8">
+      <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-4">
         <div className="mb-2">
           <Button
             type="button"
             variant="outline"
             onClick={navigateToCars}
-            className="gap-2 rounded-full"
+            className="gap-2 rounded-lg cursor-pointer hover:bg-zinc-400 "
           >
             <ArrowLeft className="h-4 w-4" />
             Back to Cars
           </Button>
         </div>
-
         <div className="grid gap-6 xl:grid-cols-[1.4fr_1fr]">
-          {/*left side:main gallery image and navigation. */}
+          {/*Main image and navigation. */}
           <Card className="overflow-hidden rounded-[32px] pt-0">
             {gallery.length > 0 ? (
               <div className="space-y-3 p-3 sm:space-y-4 sm:p-4">
@@ -305,7 +304,7 @@ export default function CarsDetailsPage() {
             )}
           </Card>
 
-          {/* Right side:car title, price, and key purchase details. */}
+          {/*Car title, price, and key purchase details. */}
           <Card className="rounded-[32px]">
             <CardHeader className="gap-3">
               <div className="flex flex-wrap items-center gap-3">
@@ -351,7 +350,6 @@ export default function CarsDetailsPage() {
             </CardContent>
           </Card>
         </div>
-
         {/* Section overview. */}
         <Card className="rounded-[32px]">
           <CardHeader>
