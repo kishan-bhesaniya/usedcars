@@ -234,11 +234,11 @@ export default function CarsDetailsPage() {
         </div>
 
         <div className="grid gap-6 xl:grid-cols-[1.4fr_1fr]">
-          {/*left side:main gallery image and thumbnail navigation. */}
+          {/*left side:main gallery image and navigation. */}
           <Card className="overflow-hidden rounded-[32px] pt-0">
             {gallery.length > 0 ? (
-              <div className="space-y-4 p-4">
-                <div className="relative overflow-hidden rounded-3xl border bg-muted">
+              <div className="space-y-3 p-3 sm:space-y-4 sm:p-4">
+                <div className="relative overflow-hidden rounded-[24px] border bg-muted sm:rounded-3xl">
                   <img
                     src={selectedImage}
                     alt={`${getCarName(car)} image ${selectedImageIndex + 1}`}
@@ -252,22 +252,22 @@ export default function CarsDetailsPage() {
                         size="icon"
                         variant="secondary"
                         onClick={showPreviousImage}
-                        className="absolute top-1/2 left-4 h-10 w-10 -translate-y-1/2 rounded-full shadow-sm"
+                        className="absolute top-1/2 left-2 h-4 w-8 -translate-y-1/2 rounded-full shadow-sm sm:left-4 sm:h-10 sm:w-10"
                         aria-label="Show previous photo"
                       >
-                        <ChevronLeft className="h-5 w-5" />
+                        <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
                       </Button>
                       <Button
                         type="button"
                         size="icon"
                         variant="secondary"
                         onClick={showNextImage}
-                        className="absolute top-1/2 right-4 h-10 w-10 -translate-y-1/2 rounded-full shadow-sm"
+                        className="absolute top-1/2 right-2 h-4 w-8 -translate-y-1/2 rounded-full shadow-sm sm:right-4 sm:h-10 sm:w-10"
                         aria-label="Show next photo"
                       >
-                        <ChevronRight className="h-5 w-5" />
+                        <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
                       </Button>
-                      <div className="absolute right-4 bottom-4 rounded-full bg-black/65 px-3 py-1 text-xs font-medium text-white">
+                      <div className="absolute right-2 bottom-2 rounded-full bg-black/65 px-2.5 py-1 text-[11px] font-medium text-white sm:right-4 sm:bottom-4 sm:px-3 sm:text-xs">
                         {selectedImageIndex + 1} / {gallery.length}
                       </div>
                     </>
@@ -275,13 +275,13 @@ export default function CarsDetailsPage() {
                 </div>
 
                 {gallery.length > 1 ? (
-                  <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+                  <div className="grid grid-cols-3 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-4">
                     {gallery.map((image, index) => (
                       <button
                         key={`${image}-${index}`}
                         type="button"
                         onClick={() => setPhotoState({ carId, index })}
-                        className={`overflow-hidden rounded-2xl border transition ${
+                        className={`overflow-hidden rounded-xl border transition sm:rounded-2xl ${
                           selectedImageIndex === index
                             ? "ring-primary border-primary ring-2"
                             : "border-border hover:border-primary/50"
