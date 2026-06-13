@@ -6,8 +6,8 @@ import { CarDetailsNotFound } from "@/components/car-details/car-details-not-fou
 import { CarDetailsOverview } from "@/components/car-details/car-details-overview";
 import { CarDetailsSkeleton } from "@/components/car-details/car-details-skeleton";
 import { CarDetailsSummary } from "@/components/car-details/car-details-summary";
-import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/footer";
+import { SiteHeader } from "@/components/header";
 import { Button } from "@/components/ui/button";
 import { usePageLoading } from "@/hooks/use-page-loading";
 import {
