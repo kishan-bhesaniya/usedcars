@@ -1,7 +1,6 @@
 import { getCarCategory, getCarName, getCarStatus } from "@/lib/cars";
 
 export const SORT_OPTIONS = [
-  { value: "best-match", label: "Best match" },
   { value: "price-low-high", label: "Price: Low to High" },
   { value: "price-high-low", label: "Price: High to Low" },
   { value: "year-newest", label: "Newest registration" },
@@ -117,7 +116,7 @@ export function buildInventoryMeta(cars) {
 export function createInitialFilters(meta) {
   return {
     search: "",
-    sort: "best-match",
+    sort: "",
     minPrice: 0,
     maxPrice: meta.priceMax,
     minYear: meta.yearMin,
@@ -146,10 +145,7 @@ export function getActiveChips(filters, meta) {
     chips.push({ key: "search", label: `Search: ${filters.search.trim()}` });
   }
 
-  if (
-    filters.minPrice !== 0 ||
-    filters.maxPrice !== meta.priceMax
-  ) {
+  if (filters.minPrice !== 0 || filters.maxPrice !== meta.priceMax) {
     chips.push({
       key: "price",
       label: `${formatCompactPrice(filters.minPrice)} - ${formatCompactPrice(filters.maxPrice)}`,
