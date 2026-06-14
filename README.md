@@ -1,16 +1,61 @@
-# React + Vite
+# UsedCars
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+UsedCars is a simple car browsing web app that helps customers explore available used cars in one place.
 
-Currently, two official plugins are available:
+This product is designed to make car discovery easy. A user can open the website, search for a car, filter the inventory, compare options quickly, and open a full detail page for any vehicle they are interested in.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What This Product Does
 
-## React Compiler
+- Shows a clean home page with a featured car and quick access to the inventory.
+- Lets users browse a list of available used cars.
+- Helps users search by car model or brand.
+- Lets users filter cars by price, year, kilometers driven, brand, body type, fuel type, transmission, ownership, and status.
+- Lets users sort results by price, registration year, and kilometers driven.
+- Opens a dedicated car details page with photos and key specifications.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Main Pages
 
-## Expanding the ESLint configuration
+### 1. Home Page
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The home page introduces the product and gives users a quick starting point.
+
+Users can:
+
+- Explore the car inventory
+- Search for a specific model
+- View a featured car
+
+### 2. Cars Listing Page
+
+This page displays the available cars in the inventory.
+
+Users can:
+
+- Browse all cars
+- Apply filters to narrow results
+- Sort cars based on their preference
+
+### 3. Car Details Page
+
+This page gives full information about one selected car.
+
+Users can:
+
+- View car images
+- Check the price
+- See registration year
+- View fuel type
+- Check transmission
+- See kilometers driven
+- Review body type and other important details
+
+## Who This Product Is For
+
+This product is useful for:
+
+- Customers looking to buy a used car
+- Businesses that want a simple used-car catalog experience
+
+## Summary
+
+UsedCars is a user-friendly used car browsing platform that helps people search, filter, and view car details in a simple and organized way.
