@@ -7,7 +7,7 @@ export function CarDetailsOverview({ specs }) {
       <CardHeader>
         <CardTitle className="text-2xl">Overview</CardTitle>
       </CardHeader>
-      <CardContent className="grid gap-x-6 md:grid-cols-2 xl:grid-cols-3">
+      <CardContent className="grid gap-x-8 gap-y-4 md:grid-cols-2 xl:grid-cols-3">
         {specs.map((spec) => (
           <DetailItem
             key={spec.label}

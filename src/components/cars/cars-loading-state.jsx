@@ -7,18 +7,18 @@ export function CarsLoadingState() {
   return (
     <div className="min-h-screen bg-[linear-gradient(180deg,#f8fbfd_0%,#eef3f7_100%)]">
       <SiteHeader />
-      <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 lg:px-6 lg:py-8">
+      <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 lg:py-8 xl:px-10">
         <div className="space-y-2">
           <Skeleton className="h-4 w-28" />
           <Skeleton className="h-10 w-full max-w-2xl" />
         </div>
-        <div className="grid gap-6 xl:grid-cols-[280px_minmax(0,1fr)]">
+        <div className="grid gap-6 lg:gap-8 xl:grid-cols-[280px_minmax(0,1fr)]">
           <div className="grid gap-4">
             {Array.from({ length: 5 }).map((_, index) => (
               <Skeleton key={index} className="h-36 rounded-[28px]" />
             ))}
           </div>
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-2 lg:gap-6 xl:grid-cols-3">
             {Array.from({ length: 6 }).map((_, index) => (
               <Card key={index} className="overflow-hidden pt-0">
                 <Skeleton className="h-52 w-full rounded-none" />

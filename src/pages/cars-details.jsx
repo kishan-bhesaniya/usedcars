@@ -124,7 +124,7 @@ export default function CarsDetailsPage() {
   return (
     <div className="min-h-screen bg-[linear-gradient(180deg,#f8fbfd_0%,#eef3f7_100%)]">
       <SiteHeader title="Car details" />
-      <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-4">
+      <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="mb-2">
           <Button
             type="button"
@@ -136,7 +136,7 @@ export default function CarsDetailsPage() {
             Back to Cars
           </Button>
         </div>
-        <div className="grid gap-6 xl:grid-cols-[1.4fr_1fr]">
+        <div className="grid gap-6 lg:gap-8 xl:grid-cols-[1.4fr_1fr]">
           <CarDetailsGallery
             car={car}
             carId={carId}
