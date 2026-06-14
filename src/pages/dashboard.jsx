@@ -13,19 +13,7 @@ import {
   getCarName,
 } from "@/lib/cars";
 import { SearchIcon, SparklesIcon } from "lucide-react";
-
-function navigateTo(url) {
-  if (!url || window.location.pathname === url) {
-    return;
-  }
-
-  window.history.pushState({}, "", url);
-  window.dispatchEvent(new PopStateEvent("popstate"));
-}
-
-function openCarsPage() {
-  navigateTo("/car");
-}
+import { useNavigate } from "react-router-dom";
 
 function focusGlobalSearch() {
   const searchInput = document.querySelector(
@@ -59,6 +47,7 @@ const featuredCar =
   cars.length > 0 ? cars[Math.floor(Math.random() * cars.length)] : null;
 
 export default function Dashboard01() {
+  const navigate = useNavigate();
   const isLoading = usePageLoading();
 
   if (isLoading) {
@@ -132,7 +121,7 @@ export default function Dashboard01() {
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <Button
                     type="button"
-                    onClick={openCarsPage}
+                    onClick={() => navigate("/car")}
                     className="rounded-full cursor-pointer bg-white px-6 text-slate-900 hover:bg-white/90"
                   >
                     Explore Car

@@ -16,22 +16,12 @@ import {
   getCarGallery,
   getCarStatus,
 } from "@/lib/cars";
-
-function getCurrentCarId() {
-  const pathname = window.location.pathname || "";
-  const segments = pathname.split("/").filter(Boolean);
-
-  return segments[1] || "";
-}
-
-function navigateToCars() {
-  window.history.pushState({}, "", "/car");
-  window.dispatchEvent(new PopStateEvent("popstate"));
-}
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function CarsDetailsPage() {
+  const navigate = useNavigate();
+  const { carId = "" } = useParams();
   const cars = Array.isArray(carsData?.data) ? carsData.data : [];
-  const carId = getCurrentCarId();
   const car = cars.find((item) => item.id === carId);
   const gallery = car ? getCarGallery(car) : [];
   const [photoState, setPhotoState] = useState({ carId, index: 0 });
@@ -52,7 +42,7 @@ export default function CarsDetailsPage() {
     return (
       <div className="min-h-screen bg-[linear-gradient(180deg,#f8fbfd_0%,#eef3f7_100%)]">
         <SiteHeader title="Car details" />
-        <CarDetailsNotFound onBack={navigateToCars} />
+        <CarDetailsNotFound onBack={() => navigate("/car")} />
         <SiteFooter />
       </div>
     );
@@ -129,7 +119,7 @@ export default function CarsDetailsPage() {
           <Button
             type="button"
             variant="outline"
-            onClick={navigateToCars}
+            onClick={() => navigate("/car")}
             className="gap-2 rounded-lg cursor-pointer hover:bg-zinc-400 "
           >
             <ArrowLeft className="h-4 w-4" />
