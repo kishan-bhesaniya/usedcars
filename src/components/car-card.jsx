@@ -10,17 +10,10 @@ import {
 } from "@/lib/cars";
 import { toTitleCase } from "@/lib/car-filters";
 import { Fuel, Gauge, Settings2, SlidersHorizontal } from "lucide-react";
-
-function openCarDetails(carId) {
-  if (!carId) {
-    return;
-  }
-
-  window.history.pushState({}, "", `/car-details/${carId}`);
-  window.dispatchEvent(new PopStateEvent("popstate"));
-}
+import { useNavigate } from "react-router-dom";
 
 export function CarCard({ car, index }) {
+  const navigate = useNavigate();
   const imageUrl = getCarImage(car);
   const status = getCarStatus(car);
 
@@ -28,7 +21,7 @@ export function CarCard({ car, index }) {
     <Card className="h-full overflow-hidden rounded-[28px] border border-border/70 pt-0 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
       <button
         type="button"
-        onClick={() => openCarDetails(car.id)}
+        onClick={() => car.id && navigate(`/car-details/${car.id}`)}
         className="block w-full cursor-pointer text-left"
       >
         <div className="relative">

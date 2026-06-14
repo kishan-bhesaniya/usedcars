@@ -1,8 +1,7 @@
 import { useMemo, useState } from "react";
 import carsData from "../../cars.json";
 import { getCarCategory, getCarName } from "@/lib/cars";
-import { siteNavigation, siteUser } from "@/lib/site";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { siteNavigation } from "@/lib/site";
 import { Input } from "@/components/ui/input";
 import {
   NavigationMenu,
@@ -10,25 +9,8 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
-import { EllipsisVerticalIcon, SearchIcon, XIcon } from "lucide-react";
-
-function navigateTo(url) {
-  if (!url || window.location.pathname === url) {
-    return;
-  }
-
-  window.history.pushState({}, "", url);
-  window.dispatchEvent(new PopStateEvent("popstate"));
-}
+import { SearchIcon, XIcon } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function createSearchItems() {
   const cars = Array.isArray(carsData?.data) ? carsData.data : [];
@@ -83,6 +65,7 @@ function SearchResults({ items, onSelect, onClear }) {
 }
 
 function HeaderSearch() {
+  const navigate = useNavigate();
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const normalizedQuery = query.trim();
@@ -108,7 +91,7 @@ function HeaderSearch() {
       return;
     }
 
-    navigateTo(firstMatch.url);
+    navigate(firstMatch.url);
     setIsOpen(false);
     setQuery("");
   };
@@ -152,7 +135,7 @@ function HeaderSearch() {
       {isOpen && normalizedQuery ? (
         <SearchResults
           items={results}
-          onSelect={navigateTo}
+          onSelect={navigate}
           onClear={() => {
             setIsOpen(false);
             setQuery("");
@@ -169,12 +152,14 @@ function DesktopNavigation({ pathname }) {
       <NavigationMenuList className="gap-2">
         {siteNavigation.map((item) => (
           <NavigationMenuItem key={item.url}>
-            <NavigationMenuLink
-              href={item.url}
-              data-active={pathname === item.url}
-              className="rounded-full px-4 py-2 font-medium"
-            >
-              {item.title}
+            <NavigationMenuLink asChild>
+              <Link
+                to={item.url}
+                data-active={pathname === item.url}
+                className="rounded-full px-4 py-2 font-medium"
+              >
+                {item.title}
+              </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
         ))}
@@ -183,59 +168,13 @@ function DesktopNavigation({ pathname }) {
   );
 }
 
-function UserMenu() {
-  return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          type="button"
-          variant="ghost"
-          className="h-auto rounded-full border border-border/70 px-2 py-1.5"
-        >
-          <Avatar className="h-9 w-9 rounded-full">
-            <AvatarImage src={siteUser.avatar} alt={siteUser.name} />
-            <AvatarFallback className="rounded-full bg-primary/10 text-primary">
-              UC
-            </AvatarFallback>
-          </Avatar>
-          <div className="hidden text-left sm:block">
-            <p className="text-sm font-medium">{siteUser.name}</p>
-            <p className="text-xs text-muted-foreground">{siteUser.email}</p>
-          </div>
-          <EllipsisVerticalIcon className="ml-1 h-4 w-4 text-muted-foreground" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-64 rounded-2xl">
-        <DropdownMenuLabel>
-          <div className="flex items-center gap-3">
-            <Avatar className="h-9 w-9 rounded-full">
-              <AvatarImage src={siteUser.avatar} alt={siteUser.name} />
-              <AvatarFallback className="rounded-full bg-primary/10 text-primary">
-                UC
-              </AvatarFallback>
-            </Avatar>
-            <div>
-              <p className="font-medium">{siteUser.name}</p>
-              <p className="text-xs text-muted-foreground">{siteUser.email}</p>
-            </div>
-          </div>
-        </DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={() => navigateTo("/car")}>
-          Browse cars
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  );
-}
-
 export function SiteHeader() {
-  const pathname = window.location.pathname || "/";
+  const { pathname } = useLocation();
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/88 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-7xl items-center gap-3 px-4 py-4 lg:px-6">
-        <a href="/" className="flex min-w-0 items-center gap-3">
+        <Link to="/" className="flex min-w-0 items-center gap-3">
           <img
             src="/logo.png"
             alt="UsedCars logo"
@@ -246,7 +185,7 @@ export function SiteHeader() {
               UsedCars
             </p>
           </div>
-        </a>
+        </Link>
         <DesktopNavigation pathname={pathname} />
         <div className="ml-auto flex flex-1 items-center justify-end gap-3">
           <HeaderSearch />

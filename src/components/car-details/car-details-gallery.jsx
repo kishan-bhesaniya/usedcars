@@ -16,7 +16,7 @@ export function CarDetailsGallery({
   return (
     <Card className="overflow-hidden rounded-[32px] pt-0">
       {gallery.length > 0 ? (
-        <div className="space-y-3 p-3 sm:space-y-4 sm:p-4">
+        <div className="space-y-4 p-4 sm:space-y-5 sm:p-5 lg:p-6">
           <div className="relative overflow-hidden rounded-[24px] border bg-muted sm:rounded-3xl">
             <img
               src={selectedImage}

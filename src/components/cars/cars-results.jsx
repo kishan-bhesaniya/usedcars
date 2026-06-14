@@ -22,7 +22,7 @@ export function CarsResults({ cars, onResetFilters }) {
   }
 
   return (
-    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid gap-5 md:grid-cols-2 lg:gap-6 xl:grid-cols-3">
       {cars.map((car, index) => (
         <CarCard key={car.id ?? car.name ?? index} car={car} index={index} />
       ))}

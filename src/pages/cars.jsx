@@ -97,7 +97,7 @@ export default function CarsPage() {
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(12,82,151,0.08),transparent_24%),linear-gradient(180deg,#f8fbfd_0%,#eef3f7_100%)]">
       <SiteHeader />
-      <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 lg:px-6 lg:py-8">
+      <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 lg:py-8 xl:px-10">
         <CarsMobileFilters
           cars={cars}
           meta={meta}
@@ -106,7 +106,7 @@ export default function CarsPage() {
           onToggle={toggleValue}
         />
 
-        <div className="grid gap-6 lg:grid-cols-[280px_minmax(0,1fr)]">
+        <div className="grid gap-6 lg:gap-8 lg:grid-cols-[280px_minmax(0,1fr)]">
           <aside className="hidden lg:block">
             <div className="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pr-2">
               <CarsFilterSidebar
