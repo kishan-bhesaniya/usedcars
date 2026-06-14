@@ -120,7 +120,7 @@ export default function CarsDetailsPage() {
             type="button"
             variant="outline"
             onClick={() => navigate("/car")}
-            className="gap-2 rounded-lg cursor-pointer hover:bg-zinc-400 "
+            className="gap-2 rounded-lg cursor-pointer"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to Cars
