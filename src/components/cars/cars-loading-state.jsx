@@ -13,9 +13,43 @@ export function CarsLoadingState() {
           <Skeleton className="h-10 w-full max-w-2xl" />
         </div>
         <div className="grid gap-6 lg:gap-8 xl:grid-cols-[280px_minmax(0,1fr)]">
-          <div className="grid gap-4">
-            {Array.from({ length: 5 }).map((_, index) => (
-              <Skeleton key={index} className="h-36 rounded-[28px]" />
+          <div className="border-r-0 bg-transparent px-0">
+            {Array.from({ length: 4 }).map((_, index) => (
+              <div
+                key={index}
+                className="border-b border-slate-200 py-4 last:border-b-0"
+              >
+                <div className="mb-4 flex items-center justify-between gap-3">
+                  <Skeleton className="h-4 w-20" />
+                  <Skeleton className="h-4 w-4 rounded-full" />
+                </div>
+                <div className="mt-4 space-y-3">
+                  {index === 1 || index === 2 ? (
+                    <>
+                      <Skeleton className="h-12 w-full rounded-xl" />
+                      <div className="relative h-7">
+                        <Skeleton className="absolute top-1/2 h-2 w-full -translate-y-1/2 rounded-full" />
+                        <Skeleton className="absolute top-1/2 left-[18%] h-2 w-[52%] -translate-y-1/2 rounded-full" />
+                        <Skeleton className="absolute top-1/2 left-[18%] h-5 w-5 -translate-y-1/2 rounded-full" />
+                        <Skeleton className="absolute top-1/2 left-[70%] h-5 w-5 -translate-y-1/2 rounded-full" />
+                      </div>
+                    </>
+                  ) : (
+                    Array.from({ length: 4 }).map((__, optionIndex) => (
+                      <div
+                        key={optionIndex}
+                        className="flex items-center justify-between gap-3"
+                      >
+                        <div className="flex items-center gap-3">
+                          <Skeleton className="h-4 w-4 rounded-sm" />
+                          <Skeleton className="h-4 w-24" />
+                        </div>
+                        <Skeleton className="h-3 w-6" />
+                      </div>
+                    ))
+                  )}
+                </div>
+              </div>
             ))}
           </div>
           <div className="grid gap-5 md:grid-cols-2 lg:gap-6 xl:grid-cols-3">
