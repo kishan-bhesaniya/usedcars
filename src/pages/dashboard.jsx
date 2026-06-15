@@ -106,14 +106,13 @@ export default function Dashboard01() {
           <div className="grid gap-10 px-6 py-8 lg:grid-cols-[1.2fr_0.8fr] lg:px-10 lg:py-12">
             <div className="relative">
               <div className="absolute -top-10 -left-6 h-40 w-40 rounded-full bg-cyan-400/18 blur-3xl" />
-              <div className="absolute right-0 bottom-0 h-48 w-48 rounded-full bg-sky-500/10 blur-3xl" />
               <div className="relative max-w-2xl space-y-6">
-                <Badge className="rounded-md w-fit border border-white/15 bg-white/10 px-4 py-1 text-white">
-                  <SparklesIcon className="mr-2 h-4 w-4" />
+                <Badge className="rounded-md w-fit border border-white/15 bg-white/10 px-4 py-2 text-white">
+                  <SparklesIcon className="h-4 w-4" />
                   Trusted cars, clean buying
                 </Badge>
                 <div className="space-y-4">
-                  <h1 className="max-w-xl text-4xl leading-tight font-semibold sm:text-5xl">
+                  <h1 className="max-w-xl text-2xl leading-tight font-semibold sm:text-4xl">
                     Explore your car products from one clear, customer-friendly
                     home page.
                   </h1>
@@ -136,7 +135,7 @@ export default function Dashboard01() {
                     Search any model
                   </Button>
                 </div>
-                <div className="grid gap-4 pt-2 sm:grid-cols-3">
+                <div className="grid gap-4 pt-2 sm:grid-cols-3 sm:mt-50">
                   <div>
                     <p className="text-3xl font-semibold">
                       {carsSummary.totalCars}+
@@ -156,7 +155,7 @@ export default function Dashboard01() {
                 </div>
               </div>
             </div>
-            {/* Featured card highlights. */}
+            {/* card highlights. */}
             {featuredCar ? (
               <div className="relative flex items-center justify-center">
                 <div className="w-full max-w-md overflow-hidden rounded-[32px] border border-white/10 bg-white/8 shadow-2xl shadow-slate-950/25 backdrop-blur">
