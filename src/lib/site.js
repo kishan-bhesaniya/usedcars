@@ -1,8 +1,8 @@
-export const siteNavigation = [
-];
+export const siteNavigation = [];
 
-export const siteUser = {
-  name: "UsedCars Team",
-  email: "hello@usedcars.com",
-  avatar: "",
+export const siteMeta = {
+  name: "UsedCars",
+  description:
+    "Browse used cars with search, filters, detailed car pages, and a clean discovery experience.",
+  image: "/logo.png",
 };

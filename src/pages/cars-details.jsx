@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import carsData from "../../cars.json";
 import { ArrowLeft } from "lucide-react";
 import { CarDetailsGallery } from "@/components/car-details/car-details-gallery";
@@ -11,9 +11,28 @@ import { SiteFooter } from "@/components/footer";
 import { SiteHeader } from "@/components/header";
 import { Button } from "@/components/ui/button";
 import { usePageLoading } from "@/hooks/use-page-loading";
-import { getCarGallery, getCarStatus } from "@/lib/cars";
+import {
+  formatCurrency,
+  formatList,
+  getCarGallery,
+  getCarName,
+  getCarStatus,
+} from "@/lib/cars";
 import { getCarSpecs, getSimilarCars } from "@/lib/car-details";
+import { siteMeta } from "@/lib/site";
 import { useNavigate, useParams } from "react-router-dom";
+
+function setMeta(name, content, attribute = "name") {
+  let meta = document.head.querySelector(`meta[${attribute}="${name}"]`);
+
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.setAttribute(attribute, name);
+    document.head.appendChild(meta);
+  }
+
+  meta.setAttribute("content", content);
+}
 
 export default function CarsDetailsPage() {
   const navigate = useNavigate();
@@ -27,6 +46,39 @@ export default function CarsDetailsPage() {
   const isLoading = usePageLoading([carId]);
   const status = car ? getCarStatus(car) : "";
   const similarCars = useMemo(() => getSimilarCars(cars, car), [car, cars]);
+
+  useEffect(() => {
+    if (!car) {
+      const fallbackDescription =
+        "View used car specifications, price, gallery, and more details.";
+
+      document.title = `Car Details | ${siteMeta.name}`;
+      setMeta("description", fallbackDescription);
+      setMeta("og:title", `Car Details | ${siteMeta.name}`, "property");
+      setMeta("og:description", fallbackDescription, "property");
+      return;
+    }
+
+    const description = [
+      getCarName(car),
+      car.registration_year ? `${car.registration_year} model` : null,
+      car.km_driven
+        ? `${car.km_driven.toLocaleString("en-IN")} km driven`
+        : null,
+      car.fuel_type ? `${formatList(car.fuel_type)} fuel` : null,
+      car.transmission ? `${formatList(car.transmission)} transmission` : null,
+      typeof car.price === "number"
+        ? `priced at ${formatCurrency(car.price)}`
+        : null,
+    ]
+      .filter(Boolean)
+      .join(", ");
+
+    document.title = `${getCarName(car)} | ${siteMeta.name}`;
+    setMeta("description", description);
+    setMeta("og:title", `${getCarName(car)} | ${siteMeta.name}`, "property");
+    setMeta("og:description", description, "property");
+  }, [car]);
 
   if (isLoading) {
     return (

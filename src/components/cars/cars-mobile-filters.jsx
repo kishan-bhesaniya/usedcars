@@ -11,7 +11,13 @@ import {
 } from "@/components/ui/sheet";
 import { Filter, XIcon } from "lucide-react";
 
-export function CarsMobileFilters({ cars, meta, filters, onRangeChange, onToggle }) {
+export function CarsMobileFilters({
+  cars,
+  meta,
+  filters,
+  onRangeChange,
+  onToggle,
+}) {
   return (
     <div className="flex justify-end lg:hidden">
       <Sheet>
@@ -27,7 +33,7 @@ export function CarsMobileFilters({ cars, meta, filters, onRangeChange, onToggle
           showCloseButton={false}
         >
           <SheetHeader className="relative">
-            <SheetTitle>Filter cars</SheetTitle>
+            <SheetTitle></SheetTitle>
             <SheetDescription></SheetDescription>
             <SheetClose asChild>
               <Button

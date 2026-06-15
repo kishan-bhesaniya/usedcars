@@ -179,7 +179,7 @@ export function SiteHeader() {
           className="flex min-w-0 flex-1 items-center gap-3 md:flex-none"
         >
           <img
-            src="/logo.png"
+            src="/usedcars.svg"
             alt="UsedCars logo"
             className="h-10 w-auto shrink-0 object-contain sm:h-11"
           />

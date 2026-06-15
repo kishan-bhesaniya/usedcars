@@ -1,6 +1,8 @@
+import { useEffect } from "react";
 import carsData from "../../cars.json";
 import { SiteFooter } from "@/components/footer";
 import { SiteHeader } from "@/components/header";
+import { siteMeta } from "@/lib/site";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -46,9 +48,31 @@ const cars = Array.isArray(carsData?.data) ? carsData.data : [];
 const featuredCar =
   cars.length > 0 ? cars[Math.floor(Math.random() * cars.length)] : null;
 
-export default function Dashboard01() {
+function setMeta(name, content, attribute = "name") {
+  let meta = document.head.querySelector(`meta[${attribute}="${name}"]`);
+
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.setAttribute(attribute, name);
+    document.head.appendChild(meta);
+  }
+
+  meta.setAttribute("content", content);
+}
+
+export default function Dashboard() {
   const navigate = useNavigate();
   const isLoading = usePageLoading();
+
+  useEffect(() => {
+    const description =
+      "Discover used cars in one place with quick search, featured listings, and a simple path to compare vehicles.";
+
+    document.title = `Buy Used Cars Online | ${siteMeta.name}`;
+    setMeta("description", description);
+    setMeta("og:title", `Buy Used Cars Online | ${siteMeta.name}`, "property");
+    setMeta("og:description", description, "property");
+  }, []);
 
   if (isLoading) {
     return (
