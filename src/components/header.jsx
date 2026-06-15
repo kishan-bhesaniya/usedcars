@@ -115,7 +115,7 @@ function HeaderSearch() {
             setIsOpen(false);
           }
         }}
-        placeholder="Search models or brands "
+        placeholder="Search models,brands or variants"
         className="h-12 rounded-full border border-border/70 bg-background/90 pr-12 pl-11 shadow-sm backdrop-blur"
         aria-label="Global search"
       />
