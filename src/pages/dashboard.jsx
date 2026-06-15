@@ -1,5 +1,8 @@
+import { useEffect } from "react";
 import carsData from "../../cars.json";
-import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/footer";
+import { SiteHeader } from "@/components/header";
+import { siteMeta } from "@/lib/site";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -12,19 +15,7 @@ import {
   getCarName,
 } from "@/lib/cars";
 import { SearchIcon, SparklesIcon } from "lucide-react";
-
-function navigateTo(url) {
-  if (!url || window.location.pathname === url) {
-    return;
-  }
-
-  window.history.pushState({}, "", url);
-  window.dispatchEvent(new PopStateEvent("popstate"));
-}
-
-function openCarsPage() {
-  navigateTo("/car");
-}
+import { useNavigate } from "react-router-dom";
 
 function focusGlobalSearch() {
   const searchInput = document.querySelector(
@@ -57,15 +48,38 @@ const cars = Array.isArray(carsData?.data) ? carsData.data : [];
 const featuredCar =
   cars.length > 0 ? cars[Math.floor(Math.random() * cars.length)] : null;
 
-export default function Dashboard01() {
+function setMeta(name, content, attribute = "name") {
+  let meta = document.head.querySelector(`meta[${attribute}="${name}"]`);
+
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.setAttribute(attribute, name);
+    document.head.appendChild(meta);
+  }
+
+  meta.setAttribute("content", content);
+}
+
+export default function Dashboard() {
+  const navigate = useNavigate();
   const isLoading = usePageLoading();
+
+  useEffect(() => {
+    const description =
+      "Discover used cars in one place with quick search, featured listings, and a simple path to compare vehicles.";
+
+    document.title = `Buy Used Cars Online | ${siteMeta.name}`;
+    setMeta("description", description);
+    setMeta("og:title", `Buy Used Cars Online | ${siteMeta.name}`, "property");
+    setMeta("og:description", description, "property");
+  }, []);
 
   if (isLoading) {
     return (
       <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(12,82,151,0.22),transparent_32%),linear-gradient(180deg,#f7fafc_0%,#eef4f8_52%,#ffffff_100%)]">
-        <SiteHeader title="pre-owned marketplace" />
-        <main className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-6 lg:px-6 lg:py-8">
-          <section className="overflow-hidden rounded-[2.5rem] bg-[#092746] shadow-2xl shadow-slate-900/15">
+        <SiteHeader />
+        <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 lg:py-8 xl:px-10">
+          <section className="overflow-hidden rounded-[40px] bg-[#092746] shadow-2xl shadow-slate-900/15">
             <div className="grid gap-10 px-6 py-8 lg:grid-cols-[1.2fr_0.8fr] lg:px-10 lg:py-12">
               <div className="space-y-6">
                 <Skeleton className="h-8 w-40 bg-white/15" />
@@ -87,8 +101,8 @@ export default function Dashboard01() {
                 </div>
               </div>
               <div className="flex items-center justify-center">
-                <div className="w-full max-w-md space-y-4 rounded-[2rem] border border-white/10 bg-white/8 p-4 backdrop-blur">
-                  <Skeleton className="aspect-4/3 w-full rounded-[1.5rem] bg-white/12" />
+                <div className="w-full max-w-md space-y-4 rounded-[32px] border border-white/10 bg-white/8 p-4 backdrop-blur">
+                  <Skeleton className="aspect-4/3 w-full rounded-[24px] bg-white/12" />
                   <div className="space-y-3">
                     <Skeleton className="h-7 w-2/3 bg-white/15" />
                     <Skeleton className="h-4 w-1/2 bg-white/10" />
@@ -102,26 +116,27 @@ export default function Dashboard01() {
             </div>
           </section>
         </main>
+        <SiteFooter />
       </div>
     );
   }
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(12,82,151,0.22),transparent_32%),linear-gradient(180deg,#f7fafc_0%,#eef4f8_52%,#ffffff_100%)]">
-      <SiteHeader title="pre-owned marketplace" />
-      <main className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-6 lg:px-6 lg:py-8">
-        <section className="overflow-hidden rounded-[2.5rem] bg-[#092746] text-white shadow-2xl shadow-slate-900/15">
+      <SiteHeader title="" />
+      <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 lg:py-8 xl:px-10">
+        {/* Hero section. */}
+        <section className="overflow-hidden rounded-[40px] bg-[#092746] text-white shadow-2xl shadow-slate-900/15">
           <div className="grid gap-10 px-6 py-8 lg:grid-cols-[1.2fr_0.8fr] lg:px-10 lg:py-12">
             <div className="relative">
               <div className="absolute -top-10 -left-6 h-40 w-40 rounded-full bg-cyan-400/18 blur-3xl" />
-              <div className="absolute right-0 bottom-0 h-48 w-48 rounded-full bg-sky-500/10 blur-3xl" />
               <div className="relative max-w-2xl space-y-6">
-                <Badge className="rounded-md w-fit border border-white/15 bg-white/10 px-4 py-1 text-white">
-                  <SparklesIcon className="mr-2 h-4 w-4" />
+                <Badge className="rounded-md w-fit border border-white/15 bg-white/10 px-4 py-2 text-white">
+                  <SparklesIcon className="h-4 w-4" />
                   Trusted cars, clean buying
                 </Badge>
                 <div className="space-y-4">
-                  <h1 className="max-w-xl text-4xl leading-tight font-semibold sm:text-5xl">
+                  <h1 className="max-w-xl text-2xl leading-tight font-semibold sm:text-4xl">
                     Explore your car products from one clear, customer-friendly
                     home page.
                   </h1>
@@ -129,10 +144,10 @@ export default function Dashboard01() {
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <Button
                     type="button"
-                    onClick={openCarsPage}
+                    onClick={() => navigate("/car")}
                     className="rounded-full cursor-pointer bg-white px-6 text-slate-900 hover:bg-white/90"
                   >
-                    Explore inventory
+                    Explore Car
                   </Button>
                   <Button
                     type="button"
@@ -144,7 +159,7 @@ export default function Dashboard01() {
                     Search any model
                   </Button>
                 </div>
-                <div className="grid gap-4 pt-2 sm:grid-cols-3">
+                <div className="grid gap-4 pt-2 sm:grid-cols-3 md:mt-0 lg:mt-50">
                   <div>
                     <p className="text-3xl font-semibold">
                       {carsSummary.totalCars}+
@@ -164,9 +179,10 @@ export default function Dashboard01() {
                 </div>
               </div>
             </div>
+            {/* card highlights. */}
             {featuredCar ? (
               <div className="relative flex items-center justify-center">
-                <div className="w-full max-w-md overflow-hidden rounded-[2rem] border border-white/10 bg-white/8 shadow-2xl shadow-slate-950/25 backdrop-blur">
+                <div className="w-full max-w-md overflow-hidden rounded-[32px] border border-white/10 bg-white/8 shadow-2xl shadow-slate-950/25 backdrop-blur">
                   <div className="relative aspect-4/3 overflow-hidden">
                     <img
                       src={getCarImage(featuredCar)}
@@ -205,6 +221,7 @@ export default function Dashboard01() {
           </div>
         </section>
       </main>
+      <SiteFooter />
     </div>
   );
 }

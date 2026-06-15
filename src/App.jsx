@@ -1,40 +1,20 @@
-import { useEffect, useState } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Dashboard01 from "./pages/dashboard";
-import CarsPage from "./pages/cars-page";
+import Dashboard from "./pages/dashboard";
 import CarsDetailsPage from "./pages/cars-details";
-
-function getCurrentPath() {
-  return window.location.pathname || "/";
-}
+import CarsPage from "./pages/cars";
 
 function App() {
-  const [pathname, setPathname] = useState(getCurrentPath);
-
-  useEffect(() => {
-    const handleLocationChange = () => {
-      setPathname(getCurrentPath());
-    };
-
-    window.addEventListener("popstate", handleLocationChange);
-
-    return () => {
-      window.removeEventListener("popstate", handleLocationChange);
-    };
-  }, []);
-
-  if (pathname === "/car" || pathname === "/cars") {
-    return <CarsPage />;
-  }
-
-  if (
-    pathname.startsWith("/car-details/") ||
-    pathname.startsWith("/cars-details/")
-  ) {
-    return <CarsDetailsPage />;
-  }
-
-  return <Dashboard01 />;
+  return (
+    <Routes>
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/car" element={<CarsPage />} />
+      <Route path="/cars" element={<Navigate to="/car" replace />} />
+      <Route path="/car-details/:carId" element={<CarsDetailsPage />} />
+      <Route path="/cars-details/:carId" element={<CarsDetailsPage />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  );
 }
 
 export default App;

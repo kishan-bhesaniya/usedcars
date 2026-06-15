@@ -109,9 +109,7 @@ export function getCarCategory(car) {
 }
 
 export function getCarStatus(car) {
-  return (
-    car.status ?? car.availability ?? car.additional_badge ?? "Unknown Status"
-  );
+  return car.status ?? car.availability ?? car.additional_badge ?? "";
 }
 
 export function formatCurrency(value) {
