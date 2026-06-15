@@ -116,11 +116,12 @@ src/
 
 ### Data Flow Architecture
 
-1. **Data Source**: 
+1. **Data Source**:
    - Static JSON data (`cars.json`) containing car inventory
    - Component configuration (`components.json`)
 
 2. **Car Listing Flow**:
+
    ```
    CarsPage (loads cars.json)
      ├─ CarsFilterSidebar (Desktop filters)
@@ -147,16 +148,16 @@ src/
 
 ### Key Features & Implementation
 
-| Feature | Implementation |
-|---------|-----------------|
-| **Multi-criteria Filtering** | `filterAndSortCars()` applies multiple conditions simultaneously |
-| **Smart Sorting** | Sort by price, year, or kilometers using `sort` state |
-| **Image Handling** | Dynamic image URL extraction supporting multiple formats (nested objects, arrays) |
-| **Responsive Design** | Tailwind CSS breakpoints; separate desktop/mobile filter UIs |
-| **Performance** | React.useMemo prevents unnecessary re-renders and recalculations |
-| **Loading States** | Skeleton loaders and loading states for better UX |
-| **Search** | Real-time search filtering by model or brand name |
-| **Error Handling** | Not-found pages for missing car details |
+| Feature                      | Implementation                                                                    |
+| ---------------------------- | --------------------------------------------------------------------------------- |
+| **Multi-criteria Filtering** | `filterAndSortCars()` applies multiple conditions simultaneously                  |
+| **Smart Sorting**            | Sort by price, year, or kilometers using `sort` state                             |
+| **Image Handling**           | Dynamic image URL extraction supporting multiple formats (nested objects, arrays) |
+| **Responsive Design**        | Tailwind CSS breakpoints; separate desktop/mobile filter UIs                      |
+| **Performance**              | React.useMemo prevents unnecessary re-renders and recalculations                  |
+| **Loading States**           | Skeleton loaders and loading states for better UX                                 |
+| **Search**                   | Real-time search filtering by model or brand name                                 |
+| **Error Handling**           | Not-found pages for missing car details                                           |
 
 ### State Management Strategy
 
@@ -168,7 +169,7 @@ The application uses **local component state** with React Hooks:
   - Sort preference
   - Search query
 
-- **Performance Optimization**: 
+- **Performance Optimization**:
   - `useMemo` hooks cache expensive operations
   - `useState` with functional updates prevent stale closures
   - Component splitting prevents unnecessary re-renders
@@ -188,6 +189,7 @@ The application uses **local component state** with React Hooks:
 ### UI Component Architecture
 
 Built with **shadcn/ui** patterns:
+
 - Composable, unstyled component primitives
 - Radix UI under the hood for accessibility
 - Tailwind CSS for styling
