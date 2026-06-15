@@ -1,6 +1,8 @@
+import { useEffect } from "react";
 import carsData from "../../cars.json";
 import { SiteFooter } from "@/components/footer";
 import { SiteHeader } from "@/components/header";
+import { siteMeta } from "@/lib/site";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -46,9 +48,31 @@ const cars = Array.isArray(carsData?.data) ? carsData.data : [];
 const featuredCar =
   cars.length > 0 ? cars[Math.floor(Math.random() * cars.length)] : null;
 
-export default function Dashboard01() {
+function setMeta(name, content, attribute = "name") {
+  let meta = document.head.querySelector(`meta[${attribute}="${name}"]`);
+
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.setAttribute(attribute, name);
+    document.head.appendChild(meta);
+  }
+
+  meta.setAttribute("content", content);
+}
+
+export default function Dashboard() {
   const navigate = useNavigate();
   const isLoading = usePageLoading();
+
+  useEffect(() => {
+    const description =
+      "Discover used cars in one place with quick search, featured listings, and a simple path to compare vehicles.";
+
+    document.title = `Buy Used Cars Online | ${siteMeta.name}`;
+    setMeta("description", description);
+    setMeta("og:title", `Buy Used Cars Online | ${siteMeta.name}`, "property");
+    setMeta("og:description", description, "property");
+  }, []);
 
   if (isLoading) {
     return (
@@ -106,14 +130,13 @@ export default function Dashboard01() {
           <div className="grid gap-10 px-6 py-8 lg:grid-cols-[1.2fr_0.8fr] lg:px-10 lg:py-12">
             <div className="relative">
               <div className="absolute -top-10 -left-6 h-40 w-40 rounded-full bg-cyan-400/18 blur-3xl" />
-              <div className="absolute right-0 bottom-0 h-48 w-48 rounded-full bg-sky-500/10 blur-3xl" />
               <div className="relative max-w-2xl space-y-6">
-                <Badge className="rounded-md w-fit border border-white/15 bg-white/10 px-4 py-1 text-white">
-                  <SparklesIcon className="mr-2 h-4 w-4" />
+                <Badge className="rounded-md w-fit border border-white/15 bg-white/10 px-4 py-2 text-white">
+                  <SparklesIcon className="h-4 w-4" />
                   Trusted cars, clean buying
                 </Badge>
                 <div className="space-y-4">
-                  <h1 className="max-w-xl text-4xl leading-tight font-semibold sm:text-5xl">
+                  <h1 className="max-w-xl text-2xl leading-tight font-semibold sm:text-4xl">
                     Explore your car products from one clear, customer-friendly
                     home page.
                   </h1>
@@ -136,7 +159,7 @@ export default function Dashboard01() {
                     Search any model
                   </Button>
                 </div>
-                <div className="grid gap-4 pt-2 sm:grid-cols-3">
+                <div className="grid gap-4 pt-2 sm:grid-cols-3 md:mt-0 lg:mt-50">
                   <div>
                     <p className="text-3xl font-semibold">
                       {carsSummary.totalCars}+
@@ -156,7 +179,7 @@ export default function Dashboard01() {
                 </div>
               </div>
             </div>
-            {/* Featured card highlights. */}
+            {/* card highlights. */}
             {featuredCar ? (
               <div className="relative flex items-center justify-center">
                 <div className="w-full max-w-md overflow-hidden rounded-[32px] border border-white/10 bg-white/8 shadow-2xl shadow-slate-950/25 backdrop-blur">

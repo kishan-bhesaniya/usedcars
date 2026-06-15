@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import carsData from "../../cars.json";
-import { ArrowLeft, Calendar, Fuel, Gauge, Settings, Tag } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { CarDetailsGallery } from "@/components/car-details/car-details-gallery";
 import { CarDetailsNotFound } from "@/components/car-details/car-details-not-found";
 import { CarDetailsOverview } from "@/components/car-details/car-details-overview";
 import { CarDetailsSkeleton } from "@/components/car-details/car-details-skeleton";
+import { CarDetailsSimilarCars } from "@/components/car-details/car-details-similar-cars";
 import { CarDetailsSummary } from "@/components/car-details/car-details-summary";
 import { SiteFooter } from "@/components/footer";
 import { SiteHeader } from "@/components/header";
@@ -14,19 +15,70 @@ import {
   formatCurrency,
   formatList,
   getCarGallery,
+  getCarName,
   getCarStatus,
 } from "@/lib/cars";
+import { getCarSpecs, getSimilarCars } from "@/lib/car-details";
+import { siteMeta } from "@/lib/site";
 import { useNavigate, useParams } from "react-router-dom";
+
+function setMeta(name, content, attribute = "name") {
+  let meta = document.head.querySelector(`meta[${attribute}="${name}"]`);
+
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.setAttribute(attribute, name);
+    document.head.appendChild(meta);
+  }
+
+  meta.setAttribute("content", content);
+}
 
 export default function CarsDetailsPage() {
   const navigate = useNavigate();
   const { carId = "" } = useParams();
-  const cars = Array.isArray(carsData?.data) ? carsData.data : [];
+  const cars = useMemo(() => {
+    return Array.isArray(carsData?.data) ? carsData.data : [];
+  }, []);
   const car = cars.find((item) => item.id === carId);
   const gallery = car ? getCarGallery(car) : [];
   const [photoState, setPhotoState] = useState({ carId, index: 0 });
   const isLoading = usePageLoading([carId]);
   const status = car ? getCarStatus(car) : "";
+  const similarCars = useMemo(() => getSimilarCars(cars, car), [car, cars]);
+
+  useEffect(() => {
+    if (!car) {
+      const fallbackDescription =
+        "View used car specifications, price, gallery, and more details.";
+
+      document.title = `Car Details | ${siteMeta.name}`;
+      setMeta("description", fallbackDescription);
+      setMeta("og:title", `Car Details | ${siteMeta.name}`, "property");
+      setMeta("og:description", fallbackDescription, "property");
+      return;
+    }
+
+    const description = [
+      getCarName(car),
+      car.registration_year ? `${car.registration_year} model` : null,
+      car.km_driven
+        ? `${car.km_driven.toLocaleString("en-IN")} km driven`
+        : null,
+      car.fuel_type ? `${formatList(car.fuel_type)} fuel` : null,
+      car.transmission ? `${formatList(car.transmission)} transmission` : null,
+      typeof car.price === "number"
+        ? `priced at ${formatCurrency(car.price)}`
+        : null,
+    ]
+      .filter(Boolean)
+      .join(", ");
+
+    document.title = `${getCarName(car)} | ${siteMeta.name}`;
+    setMeta("description", description);
+    setMeta("og:title", `${getCarName(car)} | ${siteMeta.name}`, "property");
+    setMeta("og:description", description, "property");
+  }, [car]);
 
   if (isLoading) {
     return (
@@ -75,41 +127,7 @@ export default function CarsDetailsPage() {
     });
   };
 
-  const specs = [
-    {
-      label: "Price",
-      value: formatCurrency(car.price),
-      icon: Tag,
-    },
-    {
-      label: "Registration Year",
-      value: car.registration_year || "N/A",
-      icon: Calendar,
-    },
-    {
-      label: "Fuel Type",
-      value: formatList(car.fuel_type),
-      icon: Fuel,
-    },
-    {
-      label: "Transmission",
-      value: formatList(car.transmission),
-      icon: Settings,
-    },
-    {
-      label: "Kilometers Driven",
-      value:
-        typeof car.km_driven === "number"
-          ? `${car.km_driven.toLocaleString("en-IN")} km`
-          : "N/A",
-      icon: Gauge,
-    },
-    {
-      label: "Body Type",
-      value: formatList(car.body_type),
-      icon: Tag,
-    },
-  ];
+  const specs = getCarSpecs(car);
 
   return (
     <div className="min-h-screen bg-[linear-gradient(180deg,#f8fbfd_0%,#eef3f7_100%)]">
@@ -140,6 +158,10 @@ export default function CarsDetailsPage() {
           <CarDetailsSummary car={car} status={status} />
         </div>
         <CarDetailsOverview specs={specs} />
+        <CarDetailsSimilarCars
+          cars={similarCars}
+          onViewAll={() => navigate("/car")}
+        />
       </main>
       <SiteFooter />
     </div>

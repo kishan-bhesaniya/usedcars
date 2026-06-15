@@ -6,9 +6,6 @@ export function CarsResults({ cars, onResetFilters }) {
     return (
       <div className="rounded-[24px] border border-dashed border-border/70 bg-slate-50 p-8 text-center">
         <p className="text-lg font-semibold text-slate-900">No cars found</p>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Try widening your budget or removing a few filters.
-        </p>
         <Button
           type="button"
           variant="outline"
