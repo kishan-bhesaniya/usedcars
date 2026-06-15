@@ -100,7 +100,7 @@ function HeaderSearch() {
     <div className="relative w-full max-w-xl">
       <SearchIcon className="pointer-events-none absolute top-1/2 left-4 z-10 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
       <Input
-        type="search"
+        type="text"
         value={query}
         onFocus={() => setIsOpen(true)}
         onBlur={() => setTimeout(() => setIsOpen(false), 120)}
@@ -173,12 +173,15 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/88 backdrop-blur-xl">
-      <div className="mx-auto flex w-full max-w-7xl items-center gap-3 px-4 py-4 lg:px-6">
-        <Link to="/" className="flex min-w-0 items-center gap-3">
+      <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center gap-3 px-4 py-4 lg:px-6">
+        <Link
+          to="/"
+          className="flex min-w-0 flex-1 items-center gap-3 md:flex-none"
+        >
           <img
             src="/logo.png"
             alt="UsedCars logo"
-            className="h-11 w-auto shrink-0 object-contain"
+            className="h-10 w-auto shrink-0 object-contain sm:h-11"
           />
           <div className="min-w-0">
             <p className="truncate text-sm font-semibold tracking-[0.24em] text-primary uppercase">
@@ -187,7 +190,7 @@ export function SiteHeader() {
           </div>
         </Link>
         <DesktopNavigation pathname={pathname} />
-        <div className="ml-auto flex flex-1 items-center justify-end gap-3">
+        <div className="order-3 w-full md:order-0 md:ml-auto md:flex md:flex-1 md:items-center md:justify-end md:gap-3">
           <HeaderSearch />
         </div>
       </div>

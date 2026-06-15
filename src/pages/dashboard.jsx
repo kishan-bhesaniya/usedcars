@@ -135,7 +135,7 @@ export default function Dashboard01() {
                     Search any model
                   </Button>
                 </div>
-                <div className="grid gap-4 pt-2 sm:grid-cols-3 sm:mt-50">
+                <div className="grid gap-4 pt-2 sm:grid-cols-3 md:mt-0 lg:mt-50">
                   <div>
                     <p className="text-3xl font-semibold">
                       {carsSummary.totalCars}+
