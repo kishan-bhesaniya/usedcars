@@ -1,15 +1,6 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { SORT_OPTIONS } from "@/lib/car-filters";
-import { CircleX } from "lucide-react";
 
-export function CarsToolbar({
-  activeChips,
-  filters,
-  filteredCarsCount,
-  onResetFilters,
-  onUpdateSort,
-}) {
+export function CarsToolbar({ filters, filteredCarsCount, onUpdateSort }) {
   return (
     <div className="grid gap-4">
       <div className="flex items-center justify-between gap-3">
@@ -32,30 +23,6 @@ export function CarsToolbar({
           </select>
         </label>
       </div>
-
-      {activeChips.length > 0 ? (
-        <div className="flex flex-wrap gap-2">
-          {activeChips.map((chip) => (
-            <Badge
-              key={chip.key}
-              variant="secondary"
-              className="rounded-full px-3 py-1"
-            >
-              {chip.label}
-            </Badge>
-          ))}
-          <Button
-            type="button"
-            variant="ghost"
-            size="[2px]"
-            className="rounded-full gap-1 px-2"
-            onClick={onResetFilters}
-          >
-            <CircleX className="h-2 w-4" />
-            Clear all
-          </Button>
-        </div>
-      ) : null}
     </div>
   );
 }

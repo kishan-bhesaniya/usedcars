@@ -22,52 +22,13 @@ export function getImageUrl(imageValue) {
     if (typeof imageValue.url === "string") {
       return imageValue.url;
     }
-
-    if (typeof imageValue.id === "string") {
-      return imageValue.id;
-    }
-
-    if (typeof imageValue.id === "number") {
-      return String(imageValue.id);
-    }
-
-    if (typeof imageValue.filename_disk === "string") {
-      return imageValue.id ?? imageValue.filename_disk;
-    }
-
-    const nestedKeys = [
-      "directus_files_id",
-      "file",
-      "files",
-      "image",
-      "src",
-      "data",
-    ];
-
-    for (const key of nestedKeys) {
-      const nestedUrl = getImageUrl(imageValue[key]);
-      if (nestedUrl) {
-        return nestedUrl;
-      }
-    }
   }
 
   return "";
 }
 
 export function getCarImage(car) {
-  return (
-    getImageUrl(car.main_image) ||
-    getImageUrl(car.mainImage) ||
-    getImageUrl(car.image) ||
-    getImageUrl(car.image_url) ||
-    getImageUrl(car.imageUrl) ||
-    getImageUrl(car.thumbnail) ||
-    getImageUrl(car.photo) ||
-    getImageUrl(car.images) ||
-    getImageUrl(car.gallery) ||
-    ""
-  );
+  return getImageUrl(car.main_image);
 }
 
 export function getCarGallery(car) {
@@ -76,12 +37,6 @@ export function getCarGallery(car) {
     getImageUrl(car.sub_image),
     ...(Array.isArray(car.sub_image)
       ? car.sub_image.map((item) => getImageUrl(item))
-      : []),
-    ...(Array.isArray(car.gallery)
-      ? car.gallery.map((item) => getImageUrl(item))
-      : []),
-    ...(Array.isArray(car.images)
-      ? car.images.map((item) => getImageUrl(item))
       : []),
   ].filter(Boolean);
 

@@ -138,61 +138,6 @@ export function toggleFilterValue(currentValues, value) {
     : [...currentValues, value];
 }
 
-export function getActiveChips(filters, meta) {
-  const chips = [];
-
-  if (filters.search.trim()) {
-    chips.push({ key: "search", label: `Search: ${filters.search.trim()}` });
-  }
-
-  if (filters.minPrice !== 0 || filters.maxPrice !== meta.priceMax) {
-    chips.push({
-      key: "price",
-      label: `${formatCompactPrice(filters.minPrice)} - ${formatCompactPrice(filters.maxPrice)}`,
-    });
-  }
-
-  for (const value of filters.brands) {
-    chips.push({ key: `brand-${value}`, label: value });
-  }
-
-  for (const value of filters.bodyTypes) {
-    chips.push({ key: `body-${value}`, label: toTitleCase(value) });
-  }
-
-  for (const value of filters.fuelTypes) {
-    chips.push({ key: `fuel-${value}`, label: toTitleCase(value) });
-  }
-
-  for (const value of filters.transmissions) {
-    chips.push({ key: `trans-${value}`, label: toTitleCase(value) });
-  }
-
-  for (const value of filters.ownerships) {
-    chips.push({ key: `owner-${value}`, label: toTitleCase(value) });
-  }
-
-  for (const value of filters.statuses) {
-    chips.push({ key: `status-${value}`, label: value });
-  }
-
-  if (filters.minYear !== meta.yearMin || filters.maxYear !== meta.yearMax) {
-    chips.push({
-      key: "year",
-      label: `${filters.minYear} - ${filters.maxYear}`,
-    });
-  }
-
-  if (filters.minKms !== 0 || filters.maxKms !== meta.kmsMax) {
-    chips.push({
-      key: "kms",
-      label: `${filters.minKms.toLocaleString("en-IN")} km - ${filters.maxKms.toLocaleString("en-IN")} km`,
-    });
-  }
-
-  return chips;
-}
-
 export function buildFacetCounts(cars, values, getValues) {
   return Object.fromEntries(
     values.map((value) => [
