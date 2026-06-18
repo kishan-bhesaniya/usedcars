@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import carsData from "../../cars.json";
 import { CarsLoadingState } from "@/components/cars/cars-loading-state";
 import { CarsMobileFilters } from "@/components/cars/cars-mobile-filters";
@@ -16,6 +16,9 @@ import {
 } from "@/lib/car-filters";
 
 export default function CarsPage() {
+  const INITIAL_CARS_COUNT = 6;
+  const CARS_PER_LOAD = 3;
+
   const cars = useMemo(
     () => (Array.isArray(carsData?.data) ? carsData.data : []),
     [],
@@ -23,11 +26,42 @@ export default function CarsPage() {
   const meta = useMemo(() => buildInventoryMeta(cars), [cars]);
   const [filters, setFilters] = useState(() => createInitialFilters(meta));
   const isLoading = usePageLoading();
+  const [visibleCarsCount, setVisibleCarsCount] = useState(INITIAL_CARS_COUNT);
 
   const filteredCars = useMemo(
     () => filterAndSortCars(cars, filters),
     [cars, filters],
   );
+  const visibleCars = useMemo(
+    () => filteredCars.slice(0, visibleCarsCount),
+    [filteredCars, visibleCarsCount],
+  );
+  const hasMoreCars = visibleCarsCount < filteredCars.length;
+
+  useEffect(() => {
+    if (isLoading || !hasMoreCars) {
+      return undefined;
+    }
+
+    const handleScroll = () => {
+      const scrollPosition = window.innerHeight + window.scrollY;
+      const threshold = document.documentElement.scrollHeight - 240;
+
+      if (scrollPosition >= threshold) {
+        setVisibleCarsCount((current) =>
+          Math.min(current + CARS_PER_LOAD, filteredCars.length),
+        );
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    const frameId = window.requestAnimationFrame(handleScroll);
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [filteredCars.length, hasMoreCars, isLoading]);
 
   const updateSort = (value) => {
     setFilters((current) => ({ ...current, sort: value }));
@@ -122,7 +156,11 @@ export default function CarsPage() {
               onResetFilters={resetFilters}
               onUpdateSort={updateSort}
             />
-            <CarsResults cars={filteredCars} onResetFilters={resetFilters} />
+            <CarsResults
+              cars={visibleCars}
+              hasMoreCars={hasMoreCars}
+              onResetFilters={resetFilters}
+            />
           </section>
         </div>
       </main>
