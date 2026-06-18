@@ -12,7 +12,6 @@ import {
   buildInventoryMeta,
   createInitialFilters,
   filterAndSortCars,
-  getActiveChips,
   toggleFilterValue,
 } from "@/lib/car-filters";
 
@@ -28,10 +27,6 @@ export default function CarsPage() {
   const filteredCars = useMemo(
     () => filterAndSortCars(cars, filters),
     [cars, filters],
-  );
-  const activeChips = useMemo(
-    () => getActiveChips(filters, meta),
-    [filters, meta],
   );
 
   const updateSort = (value) => {
@@ -122,7 +117,6 @@ export default function CarsPage() {
           {/* sorting,filters and car cards. */}
           <section className="grid gap-4">
             <CarsToolbar
-              activeChips={activeChips}
               filters={filters}
               filteredCarsCount={filteredCars.length}
               onResetFilters={resetFilters}
